@@ -1,0 +1,648 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kumbh Sans";
+}
+
+/* Quiting every <a> underline */
+a{
+    text-decoration: none;
+}
+
+
+
+
+
+/* Header's styles */
+
+header{
+    background-color: #F5F5DC;
+    color: black;
+}
+/* Taking out the text's colors */
+
+header a{
+    color: #2C2C2C;
+}
+
+/* Tittle's styles */
+
+#nav-tittle{
+    font-family: "Kumbh Sans";
+    font-weight: bolder;
+}
+/* Item's styles */
+
+#nav-items-styles:hover{
+    background-color: #2C2C2C;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 0.5rem;
+}
+
+#nav-items-link:hover{
+    color:whitesmoke;
+}
+
+
+
+
+/* Main's styles */
+
+main{
+    background-color: #2C2C2C;
+    color: whitesmoke;
+    padding: 20px;
+}
+
+main a{
+    color: whitesmoke;
+}
+
+
+
+
+/* Footer */
+footer{
+    background-color: whitesmoke;
+    color: #2C2C2C;
+    width: 100%;
+}
+
+footer a{
+    color: #2C2C2C;
+    display: inline-block;
+}
+
+/* My photo */
+.footer-self-photo{
+    clip-path: circle(50% at 50% 50%);
+    height: 100px;
+    margin: 15px 10px 0px 10px;
+}
+
+/* LinkedIn's image + link */
+
+.linkedin-image-link{
+    display: inline-block;
+}
+
+/* LinkedIn's image */
+.linkedin-image{
+   height:20px ;
+   display: inline-block;
+}
+
+/* Mail logo */
+.mail-logo{
+    height: 20px;
+    display: block;
+}
+
+.all-rights-reserved{
+    padding: 10px 0 10px 10px;
+}
+
+
+
+
+
+
+/* Index */
+
+.index-main{
+    height: 100%;
+    background-color: #2C2C2C;
+}
+
+/* Top of page */
+.top-index-img-tittle{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Img */
+.top-index-img{
+    clip-path: circle(50% at 50% 50%);
+    height: 13rem;
+    margin-top: 2rem;
+    border-radius: 50%;
+    border: 0.25rem solid #F5F5DC;
+}
+
+/* Tittle */
+.top-index-tittle{
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 2rem;
+    font-weight: 100;
+}
+
+.top-index-tittle b{
+    font-size: 2.3rem;
+    font-weight: 500;
+}
+
+/* Text section */
+.index-text-section{
+display: grid;
+grid-template-areas: 
+"caption caption caption"
+"portfolio none contact";
+}
+
+/* Caption */
+.index-text-caption{
+    margin: 3rem 0.5rem 2rem 0.5rem;
+    grid-area: caption;
+    line-height: 1.5rem;
+}
+
+
+
+/* Go to the "projects" page */
+
+.go-to-project-page{
+    background-color: #F5F5DC;
+    margin-bottom: 3rem;
+    padding: .2rem;
+    border-radius: 15%;
+    box-shadow: .5rem .5rem rgba(0,0,0,0.5);
+    grid-area: portfolio;
+}
+
+.go-to-project-page-text{
+    color: #2C2C2C ;
+    font-weight: 700;
+}
+
+.go-to-project-page:hover{
+    box-shadow: 0 0 0 .5rem rgba(0,0,0,0.5);
+    padding: .3rem;
+}
+
+/* Go to contact page */
+.go-to-contact-page{
+    color: whitesmoke;
+    padding: .2rem;
+    border-radius: 15%;
+    border: solid whitesmoke .2rem;
+    grid-area: contact;
+    box-shadow: .5rem .5rem rgba(0,0,0,0.5);
+    margin-bottom: 3rem;
+}
+.go-to-contact-page:hover{
+    box-shadow: 0 0 0 .5rem rgba(0,0,0,0.5);
+    background-color: whitesmoke;
+    border: #2C2C2C;
+    color: #2C2C2C;
+    padding: .3rem;
+}
+
+.go-to-contact-page-text{
+    color: whitesmoke;
+    font-weight: 700;
+}
+
+.go-to-contact-page-text:hover{
+    color: #2C2C2C;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* About me page */
+
+/* Top of the page */
+
+.about-me-page-img-tittle{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* Img */
+.about-me-page-img{
+    clip-path: circle(50% at 50% 50%);
+    height: 400px;
+    margin-top: 30px;
+    margin-left: 150px;
+}
+
+/* Tittle */
+.about-me-page-tittle{
+    font-size: 170px;
+    text-align: right;
+    margin-right: 150px;
+}
+
+/* Text */
+.about-me-page-text{
+    line-height: 50px;
+    margin: 150px;
+    font-size: x-large;
+    font-stretch: extra-condensed;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Project's Page */
+
+/* Project page's styles */
+
+.project-page-tittle{
+    display: inline-block;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-bottom: solid whitesmoke;
+}
+
+
+
+
+/* Proyect 1's styles */
+.project-1-page{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+/* tittle */
+.project-1-page-tittle{
+    padding-bottom: 10px;
+    font-size: 30px;
+}
+
+/* Img + Tech's style */
+.project-1-page-img-tech{
+    display: inline-block;
+}
+
+/* Img's style */
+.project-1-page-img{
+    height: 200px;
+    clip-path: circle(69.7% at 50% 50%);
+    border: solid whitesmoke 2px;
+}
+
+/* tech list */
+.project-1-page-tech{
+    padding: 5px;
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: small;
+}
+
+/* tech list items */
+.project-1-page-tech li {
+    border-bottom: solid whitesmoke;
+    border-width: 2px;
+}
+
+/* text */
+.project-1-page-text{
+    display: inline-block;
+    max-width: 1200px;
+    max-height: 200px;
+    padding-left: 10px;
+    text-align: top;
+    line-height: 45px;
+    font-size: 20px;
+}
+
+#project-1-page-go-to-project{
+    padding: 10px;
+}
+
+
+
+
+
+/* Proyect 2's styles */
+.project-2-page{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+/* tittle */
+.project-2-page-tittle{
+    padding-bottom: 10px;
+    font-size: 30px;
+    margin-top:30px;
+}
+
+/* Img + Tech's style */
+.project-2-page-img-tech{
+    display: inline-block;
+}
+
+/* Img's style */
+.project-2-page-img{
+    height: 200px;
+    clip-path: circle(69.7% at 50% 50%);
+    border: solid whitesmoke 2px;
+}
+
+/* tech list */
+.project-2-page-tech{
+    padding: 5px;
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: small;
+}
+
+/* tech list items */
+.project-2-page-tech li {
+    border-bottom: solid whitesmoke;
+    border-width: 2px;
+    margin-bottom: 50px;
+}
+
+/* text */
+.project-2-page-text{
+    display: inline-block;
+    max-width: 1200px;
+    max-height: 200px;
+    padding-left: 10px;
+    text-align: top;
+    line-height: 45px;
+    font-size: 20px;
+}
+
+#project-2-page-go-to-project{
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Project example */
+
+.project-example-page-tittle{
+    display: inline-block;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-bottom: solid whitesmoke;
+}
+
+/* subheadings */
+
+.project-example-page-subheading{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* summary text */
+
+.project-example-page-text{
+    line-height: 50px;
+    font-size: x-large;
+    font-stretch: extra-condensed;
+    margin-bottom: 20px;
+}
+
+
+/* Img */
+
+.project-example-page-img{
+    position: relative;
+    left: 25%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Experience page's styles */
+
+/* Experience section */
+
+.experience-page-tittle{
+    display: inline-block;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-bottom: solid whitesmoke;
+}
+
+/* Experience 1 */
+
+/* tittle */
+.experience-1-page-tittle{
+    padding-bottom: 10px;
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* Img + text */
+.experience-1-page-img-text{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+/* Img */
+.experience-1-page-img{
+    max-width: 200px;
+    background-color: whitesmoke;
+    display: inline-block;
+}
+
+/* text */
+.experience-1-page-text{
+    display: inline-block;
+    max-width: 1200px;
+    max-height: 200px;
+    padding-left: 20px;
+    text-align: top;
+    line-height: 45px;
+    font-size: 20px;
+}
+
+
+
+/* Experience 2 */
+
+/* tittle */
+.experience-2-page-tittle{
+    padding-bottom: 10px;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+/* Img + text */
+.experience-2-page-img-text{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+/* Img */
+.experience-2-page-img{
+    height: 200px;
+    background-color: whitesmoke;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* text */
+.experience-2-page-text{
+    display: inline-block;
+    max-width: 1200px;
+    max-height: 200px;
+    padding-left: 20px;
+    text-align: top;
+    line-height: 45px;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contact Page */
+
+/* tittle */
+
+.contact-tittle{
+    display: inline-block;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* fieldset */
+
+fieldset{
+    height: 500px;
+    width: 1500px;
+    margin-left: 175px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* Name + Email */
+
+.name-email{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* Name */
+
+.name-label{
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-bottom: solid whitesmoke;
+}
+
+.name-input{
+    height: 30px;
+    width: 500px;
+}
+
+
+/* Email */
+
+.email-label{
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-bottom: solid whitesmoke;
+}
+
+.email-input{
+    height: 30px;
+    width: 500px;
+}
+
+/* Message */
+
+.message-label{
+    display: inline-block;
+    font-size: 25px;
+    border-bottom: solid whitesmoke;
+    margin-left: 25px;
+}
+
+.message-input{
+    height: 300px;
+    width: 1450px;
+    margin: 25px 25px 25px 25px;
+}
+
