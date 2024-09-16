@@ -30,9 +30,10 @@ header a{
 /* Tittle's styles */
 
 #nav-tittle{
-    font-family: "Kumbh Sans";
+    font-family: "Kumbh Sans" ; 
     font-weight: bolder;
 }
+
 /* Item's styles */
 
 #nav-items-styles:hover{
@@ -54,7 +55,6 @@ header a{
 main{
     background-color: #2C2C2C;
     color: whitesmoke;
-    padding: 20px;
 }
 
 main a{
@@ -68,42 +68,62 @@ main a{
 footer{
     background-color: whitesmoke;
     color: #2C2C2C;
-    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-areas: 
+    "img link"
+    "img mail"
+    "arr arr";
+    grid-template-columns: 45% 55%;
 }
 
 footer a{
     color: #2C2C2C;
-    display: inline-block;
 }
 
 /* My photo */
 .footer-self-photo{
     clip-path: circle(50% at 50% 50%);
-    height: 100px;
-    margin: 15px 10px 0px 10px;
+    height: 9rem;
+    margin: 1rem 1rem .8rem;
+    grid-area: img;
 }
 
 /* LinkedIn's image + link */
 
 .linkedin-image-link{
-    display: inline-block;
+    grid-area: link;
+    margin-top: 2rem;
+    width: fit-content;
 }
 
 /* LinkedIn's image */
 .linkedin-image{
-   height:20px ;
-   display: inline-block;
+   height: 1.2rem ;
+}
+
+/* Mail + Logo */
+.footer-mail-logo{
+    width: fit-content;
+    grid-area: mail;
 }
 
 /* Mail logo */
 .mail-logo{
-    height: 20px;
-    display: block;
+    height: 1rem;
 }
 
 .all-rights-reserved{
-    padding: 10px 0 10px 10px;
+    grid-area: arr;
+    display: grid;
+    align-content: center;
+    justify-content: center;
 }
+
+
+
+
+
 
 
 
@@ -135,7 +155,7 @@ footer a{
 
 /* Tittle */
 .top-index-tittle{
-    margin-top: 2rem;
+    margin: 2rem 1.2rem 0 1.2rem;
     font-size: 1.8rem;
     text-align: center;
     line-height: 2rem;
@@ -157,7 +177,7 @@ grid-template-areas:
 
 /* Caption */
 .index-text-caption{
-    margin: 3rem 0.5rem 2rem 0.5rem;
+    margin: 3rem 2.2rem 2rem 2.2rem;
     grid-area: caption;
     line-height: 1.5rem;
 }
@@ -168,7 +188,7 @@ grid-template-areas:
 
 .go-to-project-page{
     background-color: #F5F5DC;
-    margin-bottom: 3rem;
+    margin: 0 0 3rem 1.5rem;
     padding: .2rem;
     border-radius: 15%;
     box-shadow: .5rem .5rem rgba(0,0,0,0.5);
@@ -193,7 +213,7 @@ grid-template-areas:
     border: solid whitesmoke .2rem;
     grid-area: contact;
     box-shadow: .5rem .5rem rgba(0,0,0,0.5);
-    margin-bottom: 3rem;
+    margin: 0 1.5rem 3rem 0;
 }
 .go-to-contact-page:hover{
     box-shadow: 0 0 0 .5rem rgba(0,0,0,0.5);
@@ -206,6 +226,7 @@ grid-template-areas:
 .go-to-contact-page-text{
     color: whitesmoke;
     font-weight: 700;
+    padding: 1rem;
 }
 
 .go-to-contact-page-text:hover{
@@ -234,28 +255,39 @@ grid-template-areas:
 
 .about-me-page-img-tittle{
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Img */
 .about-me-page-img{
     clip-path: circle(50% at 50% 50%);
-    height: 400px;
-    margin-top: 30px;
-    margin-left: 150px;
+    height: 10rem;
+    width: 10rem;
+    margin: .9rem;
+    box-shadow: .5rem .5rem rgba(0,0,0,0.5);
 }
 
 /* Tittle */
 .about-me-page-tittle{
-    font-size: 170px;
-    text-align: right;
-    margin-right: 150px;
+    margin: 1rem;
+    font-size: 4rem;
+    font-weight: lighter;
+    background-color:#F5F5DC;
+    color: #2C2C2C;
+    border-radius: 10%;
+    width: 15rem;
+    text-align: center;
+    box-shadow: .5rem .5rem rgba(0,0,0,0.5);
 }
 
+.about-me-page-tittle b{
+    font-weight: bolder;
+}
 /* Text */
 .about-me-page-text{
-    line-height: 50px;
-    margin: 150px;
+    line-height: 3rem;
+    margin: 2rem 2rem 0 2rem;
     font-size: x-large;
     font-stretch: extra-condensed;
 }
@@ -275,14 +307,20 @@ grid-template-areas:
 
 /* Project's Page */
 
+.project-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* Project page's styles */
 
 .project-page-tittle{
-    display: inline-block;
-    font-size: 50px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1.7rem;
     border-bottom: solid whitesmoke;
+    font-weight: bolder;
 }
 
 
@@ -290,53 +328,60 @@ grid-template-areas:
 
 /* Proyect 1's styles */
 .project-1-page{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
+    display: grid;
+    align-items: center;
+    grid-template-areas: 
+    "tittle tittle"
+    "img text"
+    "tech text"
+    "text text";
+    background-color: #F5F5DC;
+    color: #2C2C2C;
+    box-shadow: .5rem .5rem rgba(0,0,0,0.5);
+    margin: 1rem;
+    padding: 1rem;
+
 }
 
 /* tittle */
 .project-1-page-tittle{
-    padding-bottom: 10px;
-    font-size: 30px;
-}
-
-/* Img + Tech's style */
-.project-1-page-img-tech{
-    display: inline-block;
+    grid-area: tittle;
+    color: #2C2C2C;
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    font-weight: bold;
 }
 
 /* Img's style */
 .project-1-page-img{
-    height: 200px;
-    clip-path: circle(69.7% at 50% 50%);
-    border: solid whitesmoke 2px;
+    height: 5rem;
+    border-radius: 10%;
+    box-shadow: .5rem .5rem rgba(0,0,0,0.5);
+    grid-area: img;
 }
 
 /* tech list */
 .project-1-page-tech{
+    grid-area: tech;
+    margin-top: .25rem;
     padding: 5px;
     list-style: none;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-around;
-    font-size: small;
+    font-size: 1rem;
 }
 
 /* tech list items */
 .project-1-page-tech li {
-    border-bottom: solid whitesmoke;
+    border-bottom: solid #2C2C2C;
     border-width: 2px;
 }
 
 /* text */
 .project-1-page-text{
-    display: inline-block;
-    max-width: 1200px;
-    max-height: 200px;
-    padding-left: 10px;
-    text-align: top;
+    grid-area: text;
     line-height: 45px;
     font-size: 20px;
 }
