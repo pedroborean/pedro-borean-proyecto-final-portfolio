@@ -328,24 +328,19 @@ grid-template-areas:
 
 /* Proyect 1's styles */
 .project-1-page{
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     align-items: center;
-    grid-template-areas: 
-    "tittle tittle"
-    "img text"
-    "tech text"
-    "text text";
     background-color: #F5F5DC;
     color: #2C2C2C;
     box-shadow: .5rem .5rem rgba(0,0,0,0.5);
     margin: 1rem;
     padding: 1rem;
-
 }
 
 /* tittle */
 .project-1-page-tittle{
-    grid-area: tittle;
     color: #2C2C2C;
     margin-bottom: 1rem;
     font-size: 1.7rem;
@@ -362,7 +357,6 @@ grid-template-areas:
 
 /* tech list */
 .project-1-page-tech{
-    grid-area: tech;
     margin-top: .25rem;
     padding: 5px;
     list-style: none;
@@ -383,11 +377,27 @@ grid-template-areas:
 .project-1-page-text{
     grid-area: text;
     line-height: 45px;
-    font-size: 20px;
+    font-size: 1rem;
 }
 
-#project-1-page-go-to-project{
-    padding: 10px;
+
+/* go to project button */
+.project-1-page-go-to-project{
+    display: inline-block;
+    background-color: whitesmoke;
+    padding: .2rem;
+    border-radius: 15%;
+    box-shadow: .5rem .5rem rgba(0,0,0,0.5);
+}
+
+.project-1-page-go-to-project-text{
+    color: #2C2C2C ;
+    font-weight: 700;
+}
+
+.project-1-page-go-to-project:hover{
+    box-shadow: 0 0 0 .5rem rgba(0,0,0,0.5);
+    padding: .3rem;
 }
 
 
@@ -397,61 +407,79 @@ grid-template-areas:
 /* Proyect 2's styles */
 .project-2-page{
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    background-color: #F5F5DC;
+    color: #2C2C2C;
+    box-shadow: .5rem .5rem rgba(0,0,0,0.5);
+    margin: 1rem;
+    padding: 1rem;
 }
 
 /* tittle */
 .project-2-page-tittle{
-    padding-bottom: 10px;
-    font-size: 30px;
-    margin-top:30px;
-}
-
-/* Img + Tech's style */
-.project-2-page-img-tech{
-    display: inline-block;
+    color: #2C2C2C;
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    font-weight: bold;
 }
 
 /* Img's style */
 .project-2-page-img{
-    height: 200px;
-    clip-path: circle(69.7% at 50% 50%);
-    border: solid whitesmoke 2px;
+    height: 5rem;
+    border-radius: 10%;
+    box-shadow: .5rem .5rem rgba(0,0,0,0.5);
+    grid-area: img;
 }
 
 /* tech list */
 .project-2-page-tech{
+    margin-top: .25rem;
     padding: 5px;
     list-style: none;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-around;
-    font-size: small;
+    font-size: 1rem;
 }
 
 /* tech list items */
 .project-2-page-tech li {
-    border-bottom: solid whitesmoke;
+    border-bottom: solid #2C2C2C;
     border-width: 2px;
-    margin-bottom: 50px;
 }
 
 /* text */
 .project-2-page-text{
-    display: inline-block;
-    max-width: 1200px;
-    max-height: 200px;
-    padding-left: 10px;
-    text-align: top;
+    grid-area: text;
     line-height: 45px;
-    font-size: 20px;
+    font-size: 1rem;
 }
 
-#project-2-page-go-to-project{
-    padding: 10px;
+
+/* go to project button */
+.project-2-page-go-to-project{
+    display: inline-block;
+    background-color: whitesmoke;
+    padding: .2rem;
+    border-radius: 15%;
+    box-shadow: .5rem .5rem rgba(0,0,0,0.5);
 }
+
+.project-2-page-go-to-project-text{
+    color: #2C2C2C ;
+    font-weight: 700;
+}
+
+.project-2-page-go-to-project:hover{
+    box-shadow: 0 0 0 .5rem rgba(0,0,0,0.5);
+    padding: .3rem;
+}
+
+
+
 
 
 
@@ -518,24 +546,35 @@ grid-template-areas:
 
 /* Experience page's styles */
 
+.experience-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* Experience section */
 
 .experience-page-tittle{
-    display: inline-block;
-    font-size: 50px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1.7rem;
     border-bottom: solid whitesmoke;
+    font-weight: bolder;
 }
 
+
 /* Experience 1 */
+.experience-page-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* tittle */
 .experience-1-page-tittle{
-    padding-bottom: 10px;
-    font-size: 30px;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* Img + text */
@@ -547,32 +586,37 @@ grid-template-areas:
 
 /* Img */
 .experience-1-page-img{
-    max-width: 200px;
+    width: 5rem;
+    height: 5rem;
     background-color: whitesmoke;
-    display: inline-block;
+    margin-left: 1rem;
 }
 
 /* text */
 .experience-1-page-text{
-    display: inline-block;
-    max-width: 1200px;
-    max-height: 200px;
-    padding-left: 20px;
+    margin-left: 1rem;
+    margin-right: .5rem;
     text-align: top;
-    line-height: 45px;
-    font-size: 20px;
+    line-height: 20px;
+    font-size: 1rem;
 }
 
 
 
 /* Experience 2 */
+.experience-page-2{
+    margin: 2rem 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* tittle */
 .experience-2-page-tittle{
-    padding-bottom: 10px;
-    font-size: 30px;
-    margin-top: 40px;
-    margin-bottom: 10px;
+    
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* Img + text */
@@ -584,21 +628,19 @@ grid-template-areas:
 
 /* Img */
 .experience-2-page-img{
-    height: 200px;
+    width: 5rem;
+    height: 5rem;
     background-color: whitesmoke;
-    display: inline-block;
-    margin-bottom: 20px;
+    margin-left: 1rem;
 }
 
 /* text */
 .experience-2-page-text{
-    display: inline-block;
-    max-width: 1200px;
-    max-height: 200px;
-    padding-left: 20px;
+    margin-left: 1rem;
+    margin-right: .5rem;
     text-align: top;
-    line-height: 45px;
-    font-size: 20px;
+    line-height: 20px;
+    font-size: 1rem;
 }
 
 
