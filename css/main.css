@@ -72,8 +72,7 @@ footer{
     display: grid;
     grid-template-areas: 
     "img link"
-    "img mail"
-    "arr arr";
+    "img mail";
     grid-template-columns: 45% 55%;
 }
 
@@ -137,6 +136,13 @@ footer a{
     background-color: #2C2C2C;
 }
 
+/* desktop tittle*/
+
+.index-tittle-desktop{
+    display: none;
+}
+
+
 /* Top of page */
 .top-index-img-tittle{
     display: flex;
@@ -181,7 +187,6 @@ grid-template-areas:
     grid-area: caption;
     line-height: 1.5rem;
 }
-
 
 
 /* Go to the "projects" page */
@@ -842,7 +847,6 @@ fieldset{
     
     /* Img */
     .top-index-img{
-        grid-area: img;
         height: 20rem;
         margin-right: 2rem;
         margin-top: 3rem;
@@ -870,7 +874,6 @@ fieldset{
     /* New tittle */
     .index-tittle-desktop{
         display: none;
-        grid-area: tittle;
     }
     
     /* Text */
@@ -1053,16 +1056,112 @@ fieldset{
     .project-example-page-img{
         height: 15rem;
     }
+    
+}
 
 
 
 
+@media screen and (min-width:1024px){
+
+    /* Index */
+
+    .index-main{
+        display: grid;
+        grid-template-areas: 
+        "text img"
+        "button1 button2";
+    }
+
+    /* Hidding the other tittle */
+
+    .top-index-tittle{
+        display: none;
+    }
+
+    /* img */
+
+    .top-index-img{
+        height: 25rem;
+        margin: 5rem;
+    }
+
+    /* Text section */
+    .index-text-section{
+        grid-area: text;
+        display: grid;
+        grid-template-areas: 
+        "tittle tittle"
+        "body body"
+        "button1 button2";
+        justify-content: center;
+    }
+
+
+    /* Tittle */
+    .index-tittle-desktop{
+        display: flex;
+        grid-area: tittle;
+        margin: 7rem 0 2rem 3rem;
+        font-size: 4rem;
+        line-height: 5rem;
+        width: 45rem;
+    }
+
+    /* text */
+    .index-text-caption{
+        grid-area: body;
+        text-align: left;
+        font-size: 2rem;
+        line-height: 3rem;
+        font-weight: lighter;
+        margin-left: 3rem;
+    }
+
+
+    /* Go to the "projects" page */
+    .go-to-project-page{
+        grid-area: button1;
+        margin-left: 3rem;
+    }
+
+    
+    /* go to contact page */
+    .go-to-contact-page{
+        grid-area: button2;
+        display: flex;
+        align-content: center;
+    }
 
 
 
     
-    
 
-    
-    
+
+
+
+
+    /* About me */
+
+    .about-me-page-img-tittle{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10rem;
+    }
+
+
+    /* tittle */
+    .about-me-page-tittle{
+        font-size: 6rem;
+        margin-top: 3rem;
+    }
+
+    /* img */
+
+    .about-me-page-img{
+        height: 25rem;
+        width: 25rem;
+    }
+
 }
