@@ -494,20 +494,26 @@ grid-template-areas:
 
 /* Project example */
 
+.work-example-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Tittle */
 .project-example-page-tittle{
     display: inline-block;
-    font-size: 50px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    margin: 1rem 0 1.5rem 1rem;
     border-bottom: solid whitesmoke;
 }
 
 /* subheadings */
 
 .project-example-page-subheading{
-    font-size: 30px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    margin: 1rem;
 }
 
 /* summary text */
@@ -516,15 +522,15 @@ grid-template-areas:
     line-height: 50px;
     font-size: x-large;
     font-stretch: extra-condensed;
-    margin-bottom: 20px;
+    margin: 2rem;
 }
 
 
 /* Img */
 
 .project-example-page-img{
-    position: relative;
-    left: 25%;
+    height: 12rem;
+    margin-bottom: 3rem;
 }
 
 
@@ -657,25 +663,29 @@ grid-template-areas:
 
 /* Contact Page */
 
+.contact-page{
+    display: grid;
+    grid-template-areas: 
+    "tittle "
+    "name"
+    "email"
+    "message";
+}
+
 /* tittle */
 
 .contact-tittle{
-    display: inline-block;
-    font-size: 50px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    grid-area: tittle;
+    font-size: 4rem;
+    margin: 2rem;
 }
 
 
 /* fieldset */
 
 fieldset{
-    height: 500px;
-    width: 1500px;
-    margin-left: 175px;
     margin-bottom: 30px;
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: column;
     justify-content: space-around;
 }
@@ -683,13 +693,15 @@ fieldset{
 /* Name + Email */
 
 .name-email{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: left;
+    gap: 1rem;
 }
 
 /* Name */
+.name-div{
+    grid-area: name;
+    margin-left: 1rem;
+}
 
 .name-label{
     display: inline-block;
@@ -699,12 +711,16 @@ fieldset{
 }
 
 .name-input{
-    height: 30px;
-    width: 500px;
+    height: 2rem;
+    width: 15rem;
 }
 
 
 /* Email */
+.email-div{
+    grid-area: email;
+    margin-left: 1rem;
+}
 
 .email-label{
     display: inline-block;
@@ -714,11 +730,16 @@ fieldset{
 }
 
 .email-input{
-    height: 30px;
-    width: 500px;
+    height: 2rem;
+    width: 18rem;
+    margin-right: .5rem;
 }
 
 /* Message */
+
+.message-div{
+    grid-area: message;
+}
 
 .message-label{
     display: inline-block;
@@ -728,8 +749,320 @@ fieldset{
 }
 
 .message-input{
-    height: 300px;
-    width: 1450px;
-    margin: 25px 25px 25px 25px;
+    height: 10rem;
+    width: 20rem;
+    margin: 1rem;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tablet styles */
+
+@media screen and (min-width:600px){
+    /* Header styles */
+
+    /* tittle */
+    #nav-tittle{
+        font-size: 2.5rem;
+    }
+
+    /* items */
+    #nav-items-styles{
+            font-size: 1.5rem;
+            padding: 0.2rem;
+        }
+
+
+
+    /* Footer */
+    footer div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+    /* img */
+    .footer-self-photo{
+        height: 10rem;
+    }
+    
+    /* linkedin img + txt */
+    .linkedin-image-link{
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    /* img */
+    .linkedin-image{
+        display: inline-block;
+        height: 2rem ;
+    }
+
+    /* mail */
+
+    .footer-mail-logo{
+        margin: 0;
+        font-size: 1.5rem;
+        margin-bottom: 2.7rem;
+    }
+
+    .mail-logo{
+        height: 2rem ;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Index styles */
+
+    .index-main{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    
+    /* Img */
+    .top-index-img{
+        grid-area: img;
+        height: 20rem;
+        margin-right: 2rem;
+        margin-top: 3rem;
+    }
+
+    /* tittle desabled */
+    .top-index-tittle{
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+
+    .top-index-tittle b{
+        font-size: 5rem;
+    }
+
+    /* text section */
+    .index-text-section{
+        display: grid;
+        grid-template-areas:
+        "tittle tittle"
+        "body body"
+        "cm bp";
+    }
+
+    /* New tittle */
+    .index-tittle-desktop{
+        display: none;
+        grid-area: tittle;
+    }
+    
+    /* Text */
+    .index-text-caption{
+        grid-area: body;
+        margin-top: 0;
+        font-size: 1.6rem;
+        line-height: 2.3rem;
+        text-align: center;
+    }
+
+    /* buttons */
+    .go-to-project-page{
+        grid-area: bp;
+        font-size: 2.5rem;
+        margin-right: 4rem;
+        text-align: center;
+        box-shadow: 1rem 1rem rgba(0,0,0,0.5);
+    }
+
+    .go-to-contact-page{
+        grid-area: cm;
+        font-size: 2.5rem;
+        margin-left: 4.5rem;
+        text-align: center;
+        box-shadow: 1rem 1rem rgba(0,0,0,0.5);
+    }
+
+
+
+
+
+
+
+
+
+    /* About me */
+
+    /* Img */
+    .about-me-page-img{
+        height: 20rem;
+        width: 20rem;
+        margin-top: 3rem;
+        border-radius: 50%;
+        border: 0.25rem solid #F5F5DC;
+    }
+
+
+    /* tittle */
+    .about-me-page-tittle{
+        width: 30rem;
+        font-size: 7rem;
+        box-shadow: 2rem 2rem rgba(0,0,0,0.5);
+    }
+
+    .about-me-page-text{
+        font-size: 1.6rem;
+        line-height: 3rem;
+        padding: 5rem ;
+    }
+
+
+
+
+
+
+
+
+    /* Portfolio */
+    .projects-cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Project 1 Styles */
+    .project-1-page{
+        width: 85%;
+        display: grid;
+        grid-template-areas: 
+        "tittle img-tech"
+        "description description"
+        "cta-button cta-button";
+    }
+
+    /* tittle */
+    .project-1-page-tittle{
+        grid-area: tittle;
+        font-size: 4rem;
+        margin: 2rem;
+    }
+
+    /* img + tech */
+    .project-1-page-img-tech{
+        grid-area: img-tech;
+    }
+
+    /* img */
+    .project-1-page-img{
+        height: 13rem;
+        width: 22rem;    
+    }
+
+    /* text */
+    .project-1-page-text{
+        grid-area: description;
+        font-size: 1.5rem;
+    }
+
+    /* button */
+    .project-1-page-go-to-project{
+        grid-area: cta-button;
+    }
+
+
+
+
+
+    /* Project 2 Styles */
+    .project-2-page{
+        width: 85%;
+        display: grid;
+        grid-template-areas: 
+        "tittle img-tech"
+        "description description"
+        "cta-button cta-button";
+    }
+
+    /* tittle */
+    .project-2-page-tittle{
+        grid-area: tittle;
+        font-size: 4rem;
+        margin: 2rem;
+    }
+
+    /* img + tech */
+    .project-2-page-img-tech{
+        grid-area: img-tech;
+    }
+
+    /* img */
+    .project-2-page-img{
+        height: 13rem;
+        width: 22rem;    
+    }
+
+    /* text */
+    .project-2-page-text{
+        grid-area: description;
+        font-size: 1.5rem;
+    }
+
+    /* button */
+    .project-2-page-go-to-project{
+        grid-area: cta-button;
+    }
+
+
+
+
+
+
+
+
+
+    /* Project example */
+
+    .project-example-page-tittle{
+        font-size: 4rem;
+    }
+
+    .project-example-page-subheading{
+            font-size:3rem;
+        }
+
+    .project-example-page-text{
+            font-size: 2rem;
+        }
+
+    .project-example-page-img{
+        height: 15rem;
+    }
+
+
+
+
+
+
+
+    
+    
+
+    
+    
+}
