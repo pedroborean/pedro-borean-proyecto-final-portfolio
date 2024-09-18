@@ -1122,6 +1122,8 @@ fieldset{
     /* Go to the "projects" page */
     .go-to-project-page{
         grid-area: button1;
+        display: flex;
+        align-content: center;
         margin-left: 3rem;
     }
 
@@ -1131,6 +1133,7 @@ fieldset{
         grid-area: button2;
         display: flex;
         align-content: center;
+        text-align: center;
     }
 
 
