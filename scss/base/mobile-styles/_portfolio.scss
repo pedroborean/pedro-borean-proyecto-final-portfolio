@@ -1,0 +1,36 @@
+@import "../../utilities/colors";
+@import "../../utilities/mixins";
+
+/* Project's Page */
+
+.project-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Project page's styles */
+
+.project-page-tittle{
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1.7rem;
+    border-bottom: solid map-get($colors , secundario );
+    font-weight: bolder;
+}
+
+.projects-cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+
+.project-1-page {
+    @include project-card;
+}
+
+.project-2-page{
+    @include project-card;
+}

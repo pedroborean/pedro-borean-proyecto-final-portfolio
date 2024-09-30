@@ -1,0 +1,118 @@
+@import "../../utilities/colors";
+
+/* Home */
+
+.index-main{
+    height: 100%;
+    background-color: map-get($colors , primario );
+    color: map-get($colors , secundario );
+    
+    /* Top of page */
+    .top-index-img-tittle{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        /* Img */
+        .top-index-img{
+            clip-path: circle(50% at 50% 50%);
+            height: 13rem;
+            margin-top: 2rem;
+            border-radius: 50%;
+            border: 0.25rem solid map-get($colors , terciario );
+        }
+
+        /* Tittle */
+        .top-index-tittle{
+        margin: 2rem 1.2rem 0 1.2rem;
+        font-size: 1.8rem;
+        text-align: center;
+        line-height: 2rem;
+        font-weight: 100;
+            
+            /*bolder tittle*/
+            b{
+                font-size: 2.3rem;
+                font-weight: 500;
+            }
+        } 
+    }
+
+    /* Text section */
+    .index-text-section{
+        display: grid;
+        grid-template-areas: 
+        "caption caption caption"
+        "portfolio none contact";
+
+        /* Desktop tittle */
+        .index-tittle-desktop{
+            display: none;
+        }
+
+        /* Caption */
+        .index-text-caption{
+            margin: 3rem 2.2rem 2rem 2.2rem;
+            grid-area: caption;
+            line-height: 1.5rem;
+        }
+
+        /* Go to the "projects" page */
+
+        .go-to-project-page{
+            background-color: map-get($colors , terciario );
+            margin: 0 0 3rem 1.5rem;
+            padding: .2rem;
+            border-radius: 15%;
+            box-shadow: .5rem .5rem map-get($colors , shadow );
+            grid-area: portfolio;
+
+            .go-to-project-page-text{
+                color: map-get($colors , primario );
+                font-weight: 700;
+            }
+
+        }
+
+        .go-to-project-page:hover{
+            box-shadow: 0 0 0 .5rem map-get($colors , shadow );
+            padding: .3rem;
+        }
+
+
+        /* Go to contact page */
+
+        .go-to-contact-page{
+            color: map-get($colors , secundario );
+            padding: .2rem;
+            border-radius: 15%;
+            border: solid map-get($colors , secundario ) .2rem;
+            grid-area: contact;
+            box-shadow: .5rem .5rem map-get($colors , shadow );
+            margin: 0 1.5rem 3rem 0;
+            
+            .go-to-contact-page-text{
+            color: map-get($colors , secundario );
+            font-weight: 700;
+            padding: 1rem;
+            }
+        }
+
+        .go-to-contact-page:hover{
+            box-shadow: 0 0 0 .5rem map-get($colors , shadow);
+            background-color: map-get($colors , secundario );
+            border: map-get($colors , primario);
+            color: map-get($colors , primario );
+            padding: .3rem;
+
+            .go-to-contact-page-text{
+                color: map-get($colors , primario );
+            }
+            
+        }
+
+    }
+}
+
+
+

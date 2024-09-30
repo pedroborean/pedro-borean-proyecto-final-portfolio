@@ -1,4 +1,15 @@
 @import "./base/reset";
-@import "./base/home";
+@import "./utilities/colors";
 
+
+@import "./base/mobile-styles/sections";
+@import "./base/mobile-styles/home";
+@import "./base/mobile-styles/about-me";
+@import "./base/mobile-styles/portfolio";
+@import "./base/mobile-styles/experience";
+@import "./base/mobile-styles/contact";
+
+
+@import "./base/tablet-styles/sections";
+@import "./base/tablet-styles/home"
 

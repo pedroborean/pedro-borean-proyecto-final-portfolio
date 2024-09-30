@@ -1,0 +1,36 @@
+@import "../../utilities/colors";
+@import "../../utilities/mixins";
+
+
+
+
+/* Experience page's styles */
+
+.experience-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Experience section */
+
+.experience-page-tittle{
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1.7rem;
+    border-bottom: solid map-get($colors , secundario );
+    font-weight: bolder;
+}
+
+
+/* Experience 1 */
+.experience-page-1{
+    @include experience-card;
+}
+
+
+/* Experience 2 */
+.experience-page-2{
+    @include experience-card;
+}
+

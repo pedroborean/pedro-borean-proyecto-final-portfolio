@@ -1,0 +1,92 @@
+@import "../../utilities/colors";
+
+/* Contact Page */
+
+.contact-page{
+    display: grid;
+    grid-template-areas: 
+    "tittle "
+    "name"
+    "email"
+    "message";
+    /* tittle */
+    .contact-tittle{
+        grid-area: tittle;
+        font-size: 4rem;
+        margin: 2rem;
+        color: map-get($colors, secundario);
+    }
+
+
+    /* fieldset */
+    fieldset{
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        /* Name + Email */
+        .name-email{
+            justify-content: left;
+            gap: 1rem;
+
+            /* Name */
+            .name-div{
+                grid-area: name;
+                margin-left: 1rem;
+
+                .name-label{
+                    display: inline-block;
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                    border-bottom: solid map-get($colors, secundario);
+                    color: map-get($colors, secundario);
+                }
+                .name-input{
+                    height: 2rem;
+                    width: 15rem;
+                }
+            }
+            /* Email */
+            .email-div{
+                grid-area: email;
+                margin-left: 1rem;
+
+                .email-label{
+                    display: inline-block;
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                    border-bottom: solid map-get($colors, secundario);
+                    color: map-get($colors, secundario);
+                }
+
+                .email-input{
+                    height: 2rem;
+                    width: 18rem;
+                    margin-right: .5rem;
+                }
+
+            }
+        }
+
+        /* Message */
+        .message-div{
+            grid-area: message;
+
+            .message-label{
+                display: inline-block;
+                font-size: 25px;
+                border-bottom: solid whitesmoke;
+                margin-left: 25px;
+                color: map-get($colors, secundario);
+            }
+
+            .message-input{
+                height: 10rem;
+                width: 20rem;
+                margin: 1rem;
+            }
+
+        }
+    }
+}

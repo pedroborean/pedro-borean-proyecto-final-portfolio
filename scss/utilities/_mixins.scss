@@ -1,0 +1,129 @@
+@import "./colors";
+
+@mixin project-card {
+
+    /* Proyect styles */
+    margin: 1rem;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: map-get($colors , terciario );
+    color: map-get($colors , primario );
+    box-shadow: .5rem .5rem map-get($colors , shadow );
+
+    h3{
+        /* tittle */
+        a{
+        color: map-get($colors , primario );
+        margin-bottom: 1rem;
+        font-size: 1.7rem;
+        font-weight: bold;
+        }
+    }
+    div{
+        a{
+            /* Img's style */
+            img{
+                height: 5rem;
+                border-radius: 10%;
+                box-shadow: .5rem .5rem map-get($colors , shadow );
+                grid-area: img;
+                }
+                    
+        }
+
+        /* tech list */
+        ul{
+            margin-top: .25rem;
+            padding: 5px;
+            list-style: none;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: space-around;
+            font-size: 1rem;
+
+            /* tech list items */
+            li{
+                border-bottom: solid map-get($colors , primario );
+                border-width: 2px;
+
+            }   
+        }
+    }
+    div{
+
+        /* text */
+        grid-area: text;
+        line-height: 45px;
+        font-size: 1rem;
+
+        /* go to project button */
+        div{
+            display: inline-block;
+            background-color:  map-get($colors , secundario );
+            padding: .2rem;
+            border-radius: 15%;
+            box-shadow: .5rem .5rem map-get($colors , shadow );
+
+            /* go to project button, text */
+            a{
+            color:map-get($colors , primario ) ;
+            font-weight: 700;
+            }
+            
+            a:hover{
+                box-shadow: 0 0 0 .5rem map-get($colors , shadow);
+                padding: .3rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+@mixin experience-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    /* tittle */
+    h3{
+        font-size: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        color:map-get($colors , secundario );
+    }
+
+    /* Img + text */
+    div{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+
+        /* Img */
+        img{
+            width: 5rem;
+            height: 5rem;
+            background-color: map-get($colors , secundario );
+            margin-left: 1rem;
+        }
+
+        /* text */
+        div{
+            margin-left: 1rem;
+            margin-right: .5rem;
+            text-align: top;
+            line-height: 20px;
+            font-size: 1rem;
+            color:map-get($colors , secundario );
+        }
+
+    }
+}
+

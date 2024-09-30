@@ -1,0 +1,51 @@
+@import "../../utilities/colors";
+
+
+main{
+
+    /* Top of the page */
+    .about-me-page-img-tittle{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        /* Img */
+        .about-me-page-img{
+            clip-path: circle(50% at 50% 50%);
+            height: 10rem;
+            width: 10rem;
+            margin: .9rem;
+            box-shadow: .5rem .5rem map-get($colors , shadow );
+        }
+
+        /* Tittle */
+        .about-me-page-tittle{
+            margin: 1rem;
+            font-size: 4rem;
+            font-weight: lighter;
+            background-color:map-get($colors , terciario );
+            color: map-get($colors , primario);
+            border-radius: 10%;
+            width: 15rem;
+            text-align: center;
+            box-shadow: .5rem .5rem map-get($colors , shadow );
+
+            /* Bolder */            
+            b{
+                font-weight: bolder;
+            }
+        }
+
+    }
+
+    /* Text */
+    .about-me-page-text{
+        line-height: 3rem;
+        margin: 2rem 2rem 0 2rem;
+        font-size: x-large;
+        font-stretch: extra-condensed;
+        color: map-get($colors , secundario );
+    }
+
+}
+

@@ -1,0 +1,117 @@
+@import "../../utilities/colors";
+
+/* Header's styles */
+
+header{
+    background-color: map-get($colors , terciario );
+    color: map-get($colors , primario );
+
+    /* Taking out the text's colors */
+    a{
+        color: map-get($colors , primario );
+    }
+    nav{
+        div{
+            /* Tittle's styles */
+            #nav-tittle{
+                font-family: "Kumbh Sans" ; 
+                font-weight: bolder;
+            }
+            div{
+                ul{
+                    #nav-items-styles:hover{
+                        display: inline-block;
+                        background-color: map-get($colors , primario );
+                        width: fit-content;
+                        height: fit-content;
+                        border-radius: 0.5rem;
+
+                        /* Item's links styles */
+                        #nav-items-link:hover{
+                            display: inline-block;
+                            color: map-get($colors , secundario );
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+/* Main's styles */
+
+main{
+    background-color: map-get($colors , primario );
+    a{
+    color: map-get($colors , secundario );
+}
+}
+
+
+
+
+
+
+/* Footer */
+
+footer{
+    background-color: map-get($colors , secundario );
+    color: map-get($colors , primario );
+    height: fit-content;
+    display: grid;
+    grid-template-areas: 
+    "img link"
+    "img mail"
+    "arr arr";
+    grid-template-columns: 45% 55%;
+
+    /* text black */
+    a{
+    color: map-get($colors , primario );
+    }
+
+        /* My photo */
+        .footer-self-photo{
+            clip-path: circle(50% at 50% 50%);
+            height: 9rem;
+            margin: 1rem 1rem .8rem;
+            grid-area: img;
+        }
+
+        /* LinkedIn's image + link */
+        .linkedin-image-link{
+            grid-area: link;
+            margin-top: 2rem;
+            width: fit-content;
+
+            /* LinkedIn's image */
+            .linkedin-image{
+                height: 1.2rem ;
+            }
+
+        }
+        
+        /* Mail + Logo */
+        .footer-mail-logo{
+            width: fit-content;
+            grid-area: mail;
+            
+            /* Mail logo */
+            .mail-logo{
+            height: 1rem;
+            }
+        }
+     .all-rights-reserved{
+        grid-area: arr;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+    }
+}
