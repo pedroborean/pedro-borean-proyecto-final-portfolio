@@ -1,4 +1,5 @@
 @import "../../utilities/colors";
+@import "../../utilities/mixins";
 
 /* Home */
 
@@ -55,6 +56,7 @@
             margin: 3rem 2.2rem 2rem 2.2rem;
             grid-area: caption;
             line-height: 1.5rem;
+            text-align: center;
         }
 
         /* Go to the "projects" page */
@@ -66,6 +68,9 @@
             border-radius: 15%;
             box-shadow: .5rem .5rem map-get($colors , shadow );
             grid-area: portfolio;
+            height: 2rem;
+            width: 9rem;
+            text-align: center;
 
             .go-to-project-page-text{
                 color: map-get($colors , primario );
@@ -75,8 +80,8 @@
         }
 
         .go-to-project-page:hover{
-            box-shadow: 0 0 0 .5rem map-get($colors , shadow );
-            padding: .3rem;
+            @include transition;
+            text-align: center;
         }
 
 
@@ -86,24 +91,27 @@
             color: map-get($colors , secundario );
             padding: .2rem;
             border-radius: 15%;
+            margin-right: 1.5rem;
             border: solid map-get($colors , secundario ) .2rem;
             grid-area: contact;
             box-shadow: .5rem .5rem map-get($colors , shadow );
-            margin: 0 1.5rem 3rem 0;
+            height: 2rem;
+            width: 9rem;
+            text-align: center;
+            align-content: center;
             
             .go-to-contact-page-text{
             color: map-get($colors , secundario );
             font-weight: 700;
-            padding: 1rem;
             }
         }
 
         .go-to-contact-page:hover{
-            box-shadow: 0 0 0 .5rem map-get($colors , shadow);
+            @include transition;
             background-color: map-get($colors , secundario );
             border: map-get($colors , primario);
             color: map-get($colors , primario );
-            padding: .3rem;
+            text-align: center;
 
             .go-to-contact-page-text{
                 color: map-get($colors , primario );

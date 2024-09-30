@@ -29,8 +29,15 @@
 
 .project-1-page {
     @include project-card;
+    .project-1-page-img{
+        margin-left: 1rem;
+    }
+    .project-1-page-go-to-project:hover{
+        @include transition;
+    }
 }
 
-.project-2-page{
-    @include project-card;
+h2{
+    color: map-get($colors , secundario );
+    padding-bottom: 2rem;
 }

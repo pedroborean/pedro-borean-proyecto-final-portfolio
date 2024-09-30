@@ -1,17 +1,623 @@
-/* Error: expected more input.
- *    ,
- * 14 | @import
- *    |        ^
- *    '
- *   scss/style.scss 14:8  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: expected more input.\a    \2577 \a 14 \2502  @import\a    \2502         ^\a    \2575 \a   scss/style.scss 14:8  root stylesheet";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans";
 }
+
+/* Quiting every <a> underline */
+a {
+  text-decoration: none;
+}
+
+/* Header's styles */
+header {
+  background-color: #F5F5DC;
+  color: #2C2C2C;
+  /* Taking out the text's colors */
+}
+header a {
+  color: #2C2C2C;
+}
+header nav div {
+  /* Tittle's styles */
+}
+header nav div #nav-tittle {
+  font-family: "Kumbh Sans";
+  font-weight: bolder;
+}
+header nav div div ul #nav-items-styles:hover {
+  display: inline-block;
+  background-color: #2C2C2C;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 0.5rem;
+  /* Item's links styles */
+}
+header nav div div ul #nav-items-styles:hover #nav-items-link:hover {
+  display: inline-block;
+  color: whitesmoke;
+}
+
+/* Main's styles */
+main {
+  background-color: #2C2C2C;
+}
+main a {
+  color: whitesmoke;
+}
+
+/* Footer */
+footer {
+  background-color: whitesmoke;
+  color: #2C2C2C;
+  height: fit-content;
+  display: grid;
+  grid-template-areas: "img link" "img mail" "arr arr";
+  grid-template-columns: 45% 55%;
+  /* text black */
+  /* My photo */
+  /* LinkedIn's image + link */
+  /* Mail + Logo */
+}
+footer a {
+  color: #2C2C2C;
+}
+footer .footer-self-photo {
+  clip-path: circle(50% at 50% 50%);
+  height: 9rem;
+  margin: 1rem 1rem 0.8rem;
+  grid-area: img;
+}
+footer .linkedin-image-link {
+  grid-area: link;
+  margin-top: 2rem;
+  width: fit-content;
+  /* LinkedIn's image */
+}
+footer .linkedin-image-link .linkedin-image {
+  height: 1.2rem;
+}
+footer .footer-mail-logo {
+  width: fit-content;
+  grid-area: mail;
+  /* Mail logo */
+}
+footer .footer-mail-logo .mail-logo {
+  height: 1rem;
+}
+footer .all-rights-reserved {
+  grid-area: arr;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+/* Home */
+.index-main {
+  height: 100%;
+  background-color: #2C2C2C;
+  color: whitesmoke;
+  /* Top of page */
+  /* Text section */
+}
+.index-main .top-index-img-tittle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Img */
+  /* Tittle */
+}
+.index-main .top-index-img-tittle .top-index-img {
+  clip-path: circle(50% at 50% 50%);
+  height: 13rem;
+  margin-top: 2rem;
+  border-radius: 50%;
+  border: 0.25rem solid #F5F5DC;
+}
+.index-main .top-index-img-tittle .top-index-tittle {
+  margin: 2rem 1.2rem 0 1.2rem;
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 2rem;
+  font-weight: 100;
+  /*bolder tittle*/
+}
+.index-main .top-index-img-tittle .top-index-tittle b {
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+.index-main .index-text-section {
+  display: grid;
+  grid-template-areas: "caption caption caption" "portfolio none contact";
+  /* Desktop tittle */
+  /* Caption */
+  /* Go to the "projects" page */
+  /* Go to contact page */
+}
+.index-main .index-text-section .index-tittle-desktop {
+  display: none;
+}
+.index-main .index-text-section .index-text-caption {
+  margin: 3rem 2.2rem 2rem 2.2rem;
+  grid-area: caption;
+  line-height: 1.5rem;
+  text-align: center;
+}
+.index-main .index-text-section .go-to-project-page {
+  background-color: #F5F5DC;
+  margin: 0 0 3rem 1.5rem;
+  padding: 0.2rem;
+  border-radius: 15%;
+  box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+  grid-area: portfolio;
+  height: 2rem;
+  width: 9rem;
+  text-align: center;
+}
+.index-main .index-text-section .go-to-project-page .go-to-project-page-text {
+  color: #2C2C2C;
+  font-weight: 700;
+}
+.index-main .index-text-section .go-to-project-page:hover {
+  transition: 600ms;
+  box-shadow: 0 0 0 0.5rem rgba(0, 0, 0, 0.5);
+  transform: scale(1.08);
+  text-align: center;
+}
+.index-main .index-text-section .go-to-contact-page {
+  color: whitesmoke;
+  padding: 0.2rem;
+  border-radius: 15%;
+  margin-right: 1.5rem;
+  border: solid whitesmoke 0.2rem;
+  grid-area: contact;
+  box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+  height: 2rem;
+  width: 9rem;
+  text-align: center;
+  align-content: center;
+}
+.index-main .index-text-section .go-to-contact-page .go-to-contact-page-text {
+  color: whitesmoke;
+  font-weight: 700;
+}
+.index-main .index-text-section .go-to-contact-page:hover {
+  transition: 600ms;
+  box-shadow: 0 0 0 0.5rem rgba(0, 0, 0, 0.5);
+  transform: scale(1.08);
+  background-color: whitesmoke;
+  border: #2C2C2C;
+  color: #2C2C2C;
+  text-align: center;
+}
+.index-main .index-text-section .go-to-contact-page:hover .go-to-contact-page-text {
+  color: #2C2C2C;
+}
+
+main {
+  /* Top of the page */
+  /* Text */
+}
+main .about-me-page-img-tittle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Img */
+  /* Tittle */
+}
+main .about-me-page-img-tittle .about-me-page-img {
+  clip-path: circle(50% at 50% 50%);
+  height: 10rem;
+  width: 10rem;
+  margin: 0.9rem;
+  box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+main .about-me-page-img-tittle .about-me-page-tittle {
+  margin: 1rem;
+  font-size: 4rem;
+  font-weight: lighter;
+  background-color: #F5F5DC;
+  color: #2C2C2C;
+  border-radius: 10%;
+  width: 15rem;
+  text-align: center;
+  box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+  /* Bolder */
+}
+main .about-me-page-img-tittle .about-me-page-tittle b {
+  font-weight: bolder;
+}
+main .about-me-page-text {
+  line-height: 3rem;
+  margin: 2rem 2rem 0 2rem;
+  padding-bottom: 2rem;
+  font-size: x-large;
+  font-stretch: extra-condensed;
+  color: whitesmoke;
+  background-color: #2C2C2C;
+}
+main .about-me-page-text p {
+  margin-bottom: 3rem;
+}
+main .about-me-page-text p b {
+  font-weight: bold;
+}
+
+/* Project's Page */
+.project-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Project page's styles */
+.project-page-tittle {
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1.7rem;
+  border-bottom: solid whitesmoke;
+  font-weight: bolder;
+}
+
+.projects-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.project-1-page {
+  /* Proyect styles */
+  margin: 1rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F5F5DC;
+  color: #2C2C2C;
+  box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+.project-1-page h3 {
+  /* tittle */
+}
+.project-1-page h3 a {
+  color: #2C2C2C;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+.project-1-page div {
+  /* tech list */
+}
+.project-1-page div a {
+  align-items: center;
+  /* Img's style */
+}
+.project-1-page div a img {
+  width: 10rem;
+  height: 8rem;
+  border-radius: 10%;
+  box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+  grid-area: img;
+}
+.project-1-page div ul {
+  margin-top: 0.25rem;
+  padding: 5px;
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 1.5rem;
+  font-size: 1rem;
+  /* tech list items */
+}
+.project-1-page div ul li {
+  border-bottom: solid #2C2C2C;
+  border-width: 2px;
+}
+.project-1-page div {
+  /* text */
+  grid-area: text;
+  line-height: 45px;
+  font-size: 1rem;
+  /* go to project button */
+}
+.project-1-page div div {
+  display: inline-block;
+  align-content: right;
+  background-color: whitesmoke;
+  padding: 0.2rem;
+  border-radius: 15%;
+  box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+  /* go to project button, text */
+}
+.project-1-page div div a {
+  color: #2C2C2C;
+  font-weight: 700;
+}
+.project-1-page .project-1-page-img {
+  margin-left: 1rem;
+}
+.project-1-page .project-1-page-go-to-project:hover {
+  transition: 600ms;
+  box-shadow: 0 0 0 0.5rem rgba(0, 0, 0, 0.5);
+  transform: scale(1.08);
+}
+
+h2 {
+  color: whitesmoke;
+  padding-bottom: 2rem;
+}
+
+/* Experience page's styles */
+.experience-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Experience section */
+.experience-page-tittle {
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1.7rem;
+  border-bottom: solid whitesmoke;
+  font-weight: bolder;
+}
+
+/* Experience 1 */
+.experience-page-1 {
+  display: grid;
+  grid-template-areas: "tittle tittle" "caption caption" "img text";
+  /* tittle */
+  /* Img */
+  /* text */
+}
+.experience-page-1 h3 {
+  grid-area: tittle;
+  font-size: 2rem;
+  margin: 1rem 0 1rem 1rem;
+  margin-bottom: 1rem;
+  color: whitesmoke;
+}
+.experience-page-1 p {
+  grid-area: caption;
+  margin-left: 1rem;
+}
+.experience-page-1 img {
+  grid-area: img;
+  width: 5rem;
+  height: 5rem;
+  background-color: whitesmoke;
+  margin-left: 1rem;
+}
+.experience-page-1 div p {
+  grid-area: text;
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+  text-align: top;
+  line-height: 25px;
+  font-size: 1rem;
+  color: whitesmoke;
+}
+
+/* Experience 2 */
+.experience-page-2 {
+  display: grid;
+  grid-template-areas: "tittle tittle" "caption caption" "img text";
+  /* tittle */
+  /* Img */
+  /* text */
+}
+.experience-page-2 h3 {
+  grid-area: tittle;
+  font-size: 2rem;
+  margin: 1rem 0 1rem 1rem;
+  margin-bottom: 1rem;
+  color: whitesmoke;
+}
+.experience-page-2 p {
+  grid-area: caption;
+  margin-left: 1rem;
+}
+.experience-page-2 img {
+  grid-area: img;
+  width: 5rem;
+  height: 5rem;
+  background-color: whitesmoke;
+  margin-left: 1rem;
+}
+.experience-page-2 div p {
+  grid-area: text;
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+  text-align: top;
+  line-height: 25px;
+  font-size: 1rem;
+  color: whitesmoke;
+}
+.experience-page-2 img {
+  height: fit-content;
+}
+
+/* Contact Page */
+.contact-page {
+  display: grid;
+  grid-template-areas: "tittle " "name" "email" "message";
+  /* tittle */
+  /* fieldset */
+}
+.contact-page .contact-tittle {
+  grid-area: tittle;
+  font-size: 4rem;
+  margin: 2rem;
+  color: whitesmoke;
+}
+.contact-page fieldset {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* Name + Email */
+  /* Message */
+}
+.contact-page fieldset .name-email {
+  justify-content: left;
+  gap: 1rem;
+  /* Name */
+  /* Email */
+}
+.contact-page fieldset .name-email .name-div {
+  grid-area: name;
+  margin-left: 1rem;
+}
+.contact-page fieldset .name-email .name-div .name-label {
+  display: inline-block;
+  font-size: 20px;
+  margin-bottom: 20px;
+  border-bottom: solid whitesmoke;
+  color: whitesmoke;
+}
+.contact-page fieldset .name-email .name-div .name-input {
+  height: 2rem;
+  width: 15rem;
+}
+.contact-page fieldset .name-email .email-div {
+  grid-area: email;
+  margin-left: 1rem;
+}
+.contact-page fieldset .name-email .email-div .email-label {
+  display: inline-block;
+  font-size: 20px;
+  margin-bottom: 20px;
+  border-bottom: solid whitesmoke;
+  color: whitesmoke;
+}
+.contact-page fieldset .name-email .email-div .email-input {
+  height: 2rem;
+  width: 18rem;
+  margin-right: 0.5rem;
+}
+.contact-page fieldset .message-div {
+  grid-area: message;
+}
+.contact-page fieldset .message-div .message-label {
+  display: inline-block;
+  font-size: 25px;
+  border-bottom: solid whitesmoke;
+  margin-left: 25px;
+  color: whitesmoke;
+}
+.contact-page fieldset .message-div .message-input {
+  height: 10rem;
+  width: 20rem;
+  margin: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  header nav div {
+    /* Header styles */
+    /* tittle */
+  }
+  header nav div #nav-tittle {
+    font-size: 2.5rem;
+  }
+  header nav div ul {
+    /* items */
+  }
+  header nav div ul #nav-items-styles {
+    font-size: 1.5rem;
+    padding: 0.2rem;
+  }
+  /* Footer */
+  footer {
+    grid-template-columns: 20% 80%;
+    /* img */
+    /* linkedin img + txt */
+    /* Mail */
+  }
+  footer .footer-self-photo {
+    height: 10rem;
+  }
+  footer .linkedin-image-link {
+    margin: 0;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    /* img */
+  }
+  footer .linkedin-image-link .linkedin-image {
+    display: inline-block;
+    height: 2rem;
+  }
+  footer .footer-mail-logo {
+    margin: 0;
+    font-size: 1.5rem;
+    margin-bottom: 2.7rem;
+    margin-left: 2rem;
+  }
+  footer .footer-mail-logo .mail-logo {
+    height: 2rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .index-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .index-main div {
+    /* Img */
+    /* tittle desabled */
+  }
+  .index-main div .top-index-img {
+    height: 20rem;
+    margin-right: 2rem;
+    margin-top: 3rem;
+  }
+  .index-main div .top-index-tittle {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+  .index-main div .top-index-tittle b {
+    font-size: 5rem;
+  }
+  .index-main .index-text-section {
+    display: grid;
+    grid-template-areas: "caption caption caption" "portfolio none contact";
+    /* Desktop tittle */
+    /* Caption */
+    /* Go to the "projects" page */
+    /* Go to contact page */
+  }
+  .index-main .index-text-section .index-tittle-desktop {
+    display: none;
+  }
+  .index-main .index-text-section .index-text-caption {
+    margin-top: 0;
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    grid-area: caption;
+  }
+  .index-main .index-text-section .go-to-project-page {
+    font-size: 2rem;
+    margin-right: 4rem;
+    margin-left: 5rem;
+    box-shadow: 1rem 1rem rgba(0, 0, 0, 0.5);
+    grid-area: portfolio;
+    height: 7rem;
+    width: 12rem;
+  }
+  .index-main .index-text-section .go-to-contact-page {
+    grid-area: contact;
+    box-shadow: 1rem 1rem rgba(0, 0, 0, 0.5);
+    height: 7rem;
+    width: 12rem;
+    font-size: 2rem;
+    margin-right: 5rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

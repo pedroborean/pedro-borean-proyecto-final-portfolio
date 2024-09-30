@@ -23,14 +23,17 @@
         }
     }
     div{
-        a{
+        a{ 
+            align-items: center;
             /* Img's style */
             img{
-                height: 5rem;
+                width: 10rem;
+                height: 8rem;
                 border-radius: 10%;
                 box-shadow: .5rem .5rem map-get($colors , shadow );
                 grid-area: img;
-                }
+
+            }
                     
         }
 
@@ -42,7 +45,7 @@
             display: flex;
             flex-wrap: nowrap;
             flex-direction: row;
-            justify-content: space-around;
+            gap: 1.5rem;
             font-size: 1rem;
 
             /* tech list items */
@@ -63,6 +66,7 @@
         /* go to project button */
         div{
             display: inline-block;
+            align-content: right;
             background-color:  map-get($colors , secundario );
             padding: .2rem;
             border-radius: 15%;
@@ -74,11 +78,8 @@
             font-weight: 700;
             }
             
-            a:hover{
-                box-shadow: 0 0 0 .5rem map-get($colors , shadow);
-                padding: .3rem;
-            }
         }
+        
     }
 }
 
@@ -87,43 +88,52 @@
 
 
 @mixin experience-card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 3rem;
-
-    /* tittle */
-    h3{
-        font-size: 2rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        color:map-get($colors , secundario );
-    }
-
-    /* Img + text */
-    div{
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: row;
-
-        /* Img */
-        img{
-            width: 5rem;
-            height: 5rem;
-            background-color: map-get($colors , secundario );
+    display: grid;
+    grid-template-areas: 
+    "tittle tittle"
+    "caption caption"
+    "img text";
+    
+        
+        /* tittle */
+        h3{
+            grid-area: tittle;
+            font-size: 2rem;
+            margin: 1rem 0 1rem 1rem;
+            margin-bottom: 1rem;
+            color:map-get($colors , secundario );
+        }
+        p{
+            grid-area: caption;
             margin-left: 1rem;
         }
 
-        /* text */
-        div{
+    /* Img */
+    img{
+        grid-area: img;
+        width: 5rem;
+        height: 5rem;
+        background-color: map-get($colors , secundario );
+        margin-left: 1rem;
+    }
+
+    /* text */
+    div{
+        
+        p{
+            grid-area: text;
             margin-left: 1rem;
             margin-right: .5rem;
             text-align: top;
-            line-height: 20px;
+            line-height: 25px;
             font-size: 1rem;
             color:map-get($colors , secundario );
         }
-
     }
 }
 
+@mixin transition {
+    transition: 600ms;
+    box-shadow: 0 0 0 .5rem map-get($colors , shadow );
+    transform: scale(1.08);
+}

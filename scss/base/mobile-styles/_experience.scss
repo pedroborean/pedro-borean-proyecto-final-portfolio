@@ -26,11 +26,16 @@
 /* Experience 1 */
 .experience-page-1{
     @include experience-card;
+    
 }
 
 
 /* Experience 2 */
 .experience-page-2{
     @include experience-card;
+    img{
+        height: fit-content;
+    }
+
 }
 

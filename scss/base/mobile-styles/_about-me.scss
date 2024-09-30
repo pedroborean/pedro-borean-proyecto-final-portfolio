@@ -42,9 +42,17 @@ main{
     .about-me-page-text{
         line-height: 3rem;
         margin: 2rem 2rem 0 2rem;
+        padding-bottom: 2rem;
         font-size: x-large;
         font-stretch: extra-condensed;
         color: map-get($colors , secundario );
+        background-color: map-get($colors , primario );
+        p{
+            margin-bottom: 3rem;
+            b{
+                font-weight: bold;
+            }
+        }
     }
 
 }
