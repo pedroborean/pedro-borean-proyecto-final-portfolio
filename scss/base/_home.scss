@@ -1,5 +1,5 @@
-@import "../../utilities/colors";
-@import "../../utilities/mixins";
+@import "../utilities/colors";
+@import "../utilities/mixins";
 
 /* Home */
 
@@ -122,5 +122,77 @@
     }
 }
 
+@include tablet{
+    .index-main{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        div{
+            /* Img */
+            .top-index-img{
+                height: 20rem;
+                margin-right: 2rem;
+                margin-top: 3rem;
+            }
+            /* tittle desabled */
+            .top-index-tittle{
+                font-size: 5rem;
+                line-height: 5rem;
+
+                b{
+                    font-size: 5rem;
+                }
+            }
+        }
+
+        .index-text-section{
+        display: grid;
+        grid-template-areas: 
+        "caption caption caption"
+        "portfolio none contact";
+
+            /* Desktop tittle */
+            .index-tittle-desktop{
+                display: none;
+            }
+
+            /* Caption */
+            .index-text-caption{
+                margin-top: 0;
+                font-size: 1.6rem;
+                line-height: 2.3rem;
+                grid-area: caption;
+            }
+
+            /* Go to the "projects" page */
+
+            .go-to-project-page{
+                font-size: 2rem;
+                margin-right: 4rem;
+                margin-left: 5rem;
+                box-shadow: 1rem 1rem map-get($colors , shadow );
+                grid-area: portfolio;
+                height: 7rem;
+                width: 12rem;
+
+            }
+
+
+            /* Go to contact page */
+
+            .go-to-contact-page{
+                grid-area: contact;
+                box-shadow: 1rem 1rem map-get($colors , shadow );
+                height: 7rem;
+                width: 12rem;
+                font-size: 2rem;
+                margin-right: 5rem;
+            }
+
+        
+        }
+    }
+}
 
 

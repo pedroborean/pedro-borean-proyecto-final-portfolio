@@ -1,5 +1,5 @@
-@import "../../utilities/colors";
-@import "../../utilities/mixins";
+@import "../utilities/colors";
+@import "../utilities/mixins";
 
 
 
@@ -26,6 +26,11 @@
 /* Experience 1 */
 .experience-page-1{
     @include experience-card;
+    @include tablet {
+        #experience-1-page-tittle{
+        font-size: 2.8rem;
+        }
+    }
     
 }
 
@@ -38,4 +43,3 @@
     }
 
 }
-

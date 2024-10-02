@@ -1,15 +1,12 @@
+@import "./base/mediaqueries";
 @import "./base/reset";
 @import "./utilities/colors";
 
 
-@import "./base/mobile-styles/sections";
-@import "./base/mobile-styles/home";
-@import "./base/mobile-styles/about-me";
-@import "./base/mobile-styles/portfolio";
-@import "./base/mobile-styles/experience";
-@import "./base/mobile-styles/contact";
-
-
-@import "./base/tablet-styles/sections";
-@import "./base/tablet-styles/home";
+@import "./base/sections";
+@import "./base/home";
+@import "./base//about-me";
+@import "./base//portfolio";
+@import "./base/experience";
+@import "./base/contact";
 

@@ -1,4 +1,4 @@
-@import "../../utilities/colors";
+@import "../utilities/colors";
 
 
 main{
@@ -57,3 +57,46 @@ main{
 
 }
 
+@include tablet{
+    main{
+
+        /* Top of the page */
+        .about-me-page-img-tittle{
+    
+            /* Img */
+            .about-me-page-img{
+                height: 20rem;
+                width: 20rem;
+                margin-top: 3rem;
+                border-radius: 50%;
+                border: 0.25rem solid map-get($colors, terciario );
+            }
+    
+            /* Tittle */
+            .about-me-page-tittle{
+                width: 30rem;
+                font-size: 7rem;
+                box-shadow: 2rem 2rem map-get($colors, shadow );
+    
+                /* Bolder */            
+                b{
+                    font-weight: bolder;
+                }
+            }
+    
+        }
+    
+        /* Text */
+        .about-me-page-text{
+            font-size: 1.6rem;
+            line-height: 3rem;
+            padding: 5rem ;
+            text-align: left;
+
+            b{
+                font-size: 2rem;
+            }
+        }
+    
+    }
+}
