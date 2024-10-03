@@ -1,0 +1,56 @@
+@import "../mediaqueries";
+
+@include desktop{
+    .index-main{
+        display: grid;
+        grid-template-areas: 
+        "img text text"
+        "img text text";
+        div{
+            /* tablet and mobile tittle */
+            .top-index-tittle{
+                display: none;
+            }
+        }
+
+        .index-text-section{
+            grid-area: text;
+            grid-template-areas: 
+            "tittle tittle tittle"
+            "caption caption caption"
+            "portfolio none contact";
+
+            /* Tittle */
+            .index-tittle-desktop{
+                display: inline-block;
+                grid-area: tittle;
+                margin-top: 5rem;
+            }
+
+
+
+            /* Caption */
+            .index-text-caption{
+                text-align: left;
+                margin-left: 0;
+                line-height: 45px;
+            }
+
+            /* Go to the "projects" page */
+
+            .go-to-project-page{
+                margin-right: 0;
+            }
+
+
+            /* Go to contact page */
+
+            .go-to-contact-page{
+                margin-right: 15rem;
+                margin-bottom: 10rem;
+            }
+
+        
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@import "../mediaqueries";
+
+@include tablet {
+        
+    div{
+
+        margin: 0 2rem 0 1.3rem;
+        #experience-1-page-tittle{
+        font-size: 2.8rem;
+        }
+
+        .experience-1-page-img{
+            height: 10rem;
+            width: 10rem;
+            margin-bottom: 2rem;
+        }
+    }
+    #experience-1-page-text{
+        p{
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
+    }   
+}

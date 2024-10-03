@@ -1,0 +1,39 @@
+@import "../mediaqueries";
+
+@include desktop{
+    main{
+
+        /* Top of the page */
+        .about-me-page-img-tittle{
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+    
+            /* Img */
+            .about-me-page-img{
+                margin-right: 15rem;
+                margin-left: 5rem;
+            }
+    
+            /* Tittle */
+            .about-me-page-tittle{
+                margin-top: 5rem;
+                height: 25rem;
+            }
+    
+        }
+    
+        /* Text */
+        .about-me-page-text{
+            font-size: 2rem;
+            line-height: 3rem;
+            padding: 5rem ;
+            text-align: left;
+
+            b{
+                font-size: 2.5rem;
+            }
+        }
+    
+    }
+}

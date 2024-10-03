@@ -1,0 +1,64 @@
+@import "../../utilities/colors";
+@import "../mediaqueries";
+
+@include tablet{
+    header{
+        nav{
+            div{
+                /* Header styles */
+        
+                /* tittle */
+                #nav-tittle{
+                    font-size: 2.5rem;
+                }
+        
+                ul{
+                    /* items */
+                    #nav-items-styles{
+                    font-size: 1.5rem;
+                    padding: 0.2rem;
+                    }    
+                }   
+            }
+        }
+    }
+    
+
+
+    /* Footer */
+    footer{
+        grid-template-columns: 20% 80%;
+        
+        /* img */
+        .footer-self-photo{
+            height: 10rem;
+        }
+
+        /* linkedin img + txt */
+        .linkedin-image-link{
+            margin: 0;
+            font-size: 1.5rem;
+            margin-left: 2rem;
+            margin-top: 2rem;
+
+            /* img */
+            .linkedin-image{
+                display: inline-block;
+                height: 2rem;
+            }
+        }
+
+        /* Mail */
+        .footer-mail-logo{
+            margin: 0;
+            font-size: 1.5rem;
+            margin-bottom: 2.7rem;
+            margin-left: 2rem;
+
+            .mail-logo{
+                height: 2rem ;
+            }
+        }
+
+    }
+}

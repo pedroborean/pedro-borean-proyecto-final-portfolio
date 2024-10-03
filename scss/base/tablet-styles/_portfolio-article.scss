@@ -1,0 +1,42 @@
+@import "../mediaqueries";
+
+@include tablet {
+
+    main{
+        article{
+    
+            div{
+                /* subheadings */
+                h2{
+                    font-size: 2rem;
+                }
+    
+                summary{
+    
+                    p{
+                        line-height: 40px;
+                        font-size: 1.5rem;
+                    }
+                }
+    
+            }
+    
+            img{
+                margin: 3rem;
+                height: 25rem;
+            }
+    
+            div{
+                h2{
+                    margin-left: 1rem;
+                }
+    
+                p{
+                    line-height: 40px;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    
+    }
+}

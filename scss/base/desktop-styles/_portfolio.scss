@@ -1,0 +1,47 @@
+@import "../mediaqueries";
+
+@include desktop{
+    .project-1-page{
+        display: grid;
+        grid-template-areas: 
+        "tittle tittle"
+        "img caption"
+        ;
+        div{
+
+            h3{
+                /* tittle */
+                a{
+                    grid-area: tittle;
+                }
+            }
+        }
+            .project-1-page-img-tech{
+                grid-area: img;
+
+                .project-1-page-img{
+                    height: 10rem;
+                    width: 13rem;
+                    margin-top: 3rem;
+                }
+
+                /* tech list */
+                ul{
+                    margin-left: 1.4rem;
+                }
+            }
+        
+        div{
+            grid-area: caption;
+            /* text */
+            font-size: 1.2rem;
+            line-height: 2rem;
+            padding-bottom: 2rem;
+            a{
+                grid-area: caption;
+            }
+            
+        }
+    }
+
+}

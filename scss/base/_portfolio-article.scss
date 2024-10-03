@@ -1,0 +1,62 @@
+@import "../utilities/colors";
+main{
+    article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        /* tittle */
+        h1{
+            color: map-get($colors, secundario );
+            font-size: 2.5rem;
+            font-weight: bolder;
+            margin-top: 2rem;
+            border-bottom: solid map-get($colors, secundario );
+        }
+
+        div{
+            /* subheadings */
+            h2{
+                font-size: 1.5rem;
+                margin-left: 1rem;
+                margin-top: 1rem;
+                font-weight: bolder;
+            }
+
+            summary{
+
+                p{
+                    line-height: 25px;
+                    font-size: 1rem;
+                    font-stretch: extra-condensed;
+                    color: map-get($colors, secundario ); 
+                    text-align: left;
+                    margin-top: .1rem;
+                    margin-left: 1rem;
+                }
+            }
+
+        }
+
+        img{
+            margin: 1rem;
+            margin-top: 1rem;
+            box-shadow: .5rem .5rem map-get($colors , shadow );
+            height: 18rem;
+            border: map-get($colors, primario ) 2px solid;
+        }
+
+        div{
+            h2{
+                margin-left: 1rem;
+            }
+
+            p{
+                color: map-get($colors, secundario );
+                margin-top: .1rem;
+                padding-bottom: 1rem;
+            }
+        }
+    }
+
+}

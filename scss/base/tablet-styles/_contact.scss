@@ -1,0 +1,68 @@
+@import "../mediaqueries";
+
+
+@include tablet{
+
+    /* Contact Page */
+
+    .contact-page{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        /* tittle */
+        .contact-tittle{
+            font-size: 7rem;
+        }
+
+
+        /* fieldset */
+        fieldset{
+
+            /* Name + Email */
+            .name-email{
+
+                /* Name */
+                .name-div{
+
+                    .name-label{
+                        font-size: 1.7rem;
+                    }
+                    .name-input{
+                        width: 50rem;
+                        height: 3rem;
+                    }
+                }
+                /* Email */
+                .email-div{
+                    margin-top: 2rem;
+
+                    .email-label{
+                        font-size: 1.7rem;
+                    }
+
+                    .email-input{
+                        width: 50rem;
+                        height: 3rem;
+                    }
+
+                }
+            }
+
+            /* Message */
+            .message-div{
+                margin-top: 2rem;
+
+                .message-label{
+                    font-size: 1.7rem;
+                }
+
+                .message-input{
+                    width: 50rem;
+                    margin: 1rem;
+                }
+
+            }
+        }
+    }  
+}

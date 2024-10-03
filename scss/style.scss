@@ -6,7 +6,21 @@
 @import "./base/sections";
 @import "./base/home";
 @import "./base//about-me";
-@import "./base//portfolio";
+@import "./base/portfolio";
 @import "./base/experience";
 @import "./base/contact";
+@import "./base/portfolio-article";
+
+@import "./base/tablet-styles/sections";
+@import "./base/tablet-styles/home";
+@import "./base/tablet-styles/about-me";
+@import "./base/tablet-styles/experience";
+@import "./base/tablet-styles/contact";
+@import "./base/tablet-styles/portfolio";
+@import "./base/tablet-styles/portfolio-article";
+
+
+@import "./base/desktop-styles/home";
+@import "./base/desktop-styles/about-me";
+@import "./base/desktop-styles/portfolio";
 
