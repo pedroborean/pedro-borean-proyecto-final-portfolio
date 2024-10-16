@@ -1,4 +1,4 @@
-@import "../utilities/colors";
+@import "../utilities/variables";
 
 /* Header's styles */
 
@@ -10,8 +10,8 @@ header{
     a{
         color: map-get($colors , primario );
     }
-    nav{
-        div{
+    
+        
             /* Tittle's styles */
             #nav-tittle{
                 font-family: "Kumbh Sans" ; 
@@ -34,8 +34,7 @@ header{
                     }
                 }
             }
-        }
-    }
+    
 }
 
 
@@ -67,28 +66,19 @@ footer{
     height: fit-content;
     display: grid;
     grid-template-areas: 
-    "img link"
-    "img mail"
+    "link mail"
     "arr arr";
-    grid-template-columns: 45% 55%;
 
     /* text black */
     a{
     color: map-get($colors , primario );
     }
 
-        /* My photo */
-        .footer-self-photo{
-            clip-path: circle(50% at 50% 50%);
-            height: 9rem;
-            margin: 1rem 1rem .8rem;
-            grid-area: img;
-        }
-
         /* LinkedIn's image + link */
         .linkedin-image-link{
             grid-area: link;
             margin-top: 2rem;
+            margin-left: 2rem;
             width: fit-content;
 
             /* LinkedIn's image */
@@ -100,18 +90,19 @@ footer{
         
         /* Mail + Logo */
         .footer-mail-logo{
-            width: fit-content;
             grid-area: mail;
-            
+            width: fit-content;
+            margin-top: 2rem;
+            margin-left: 2rem;
+    
             /* Mail logo */
             .mail-logo{
             height: 1rem;
             }
         }
-     .all-rights-reserved{
+    .all-rights-reserved{
         grid-area: arr;
-        display: grid;
-        align-content: center;
-        justify-content: center;
+        display: block;
+        text-align: center;
     }
 }

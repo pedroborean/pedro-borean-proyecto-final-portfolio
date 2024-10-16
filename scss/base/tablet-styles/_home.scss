@@ -1,13 +1,12 @@
 @import "../mediaqueries";
-@import "../../utilities/colors";
+@import "../../utilities/variables";
 
 @include tablet{
     .index-main{
-        display: flex;
-        flex-direction: column;
+        @include center-column;
         gap: 2rem;
 
-        div{
+        
             /* Img */
             .top-index-img{
                 height: 20rem;
@@ -23,7 +22,6 @@
                     font-size: 5rem;
                 }
             }
-        }
 
         .index-text-section{
         display: grid;

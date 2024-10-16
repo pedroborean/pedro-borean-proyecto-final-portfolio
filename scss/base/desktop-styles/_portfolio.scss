@@ -1,4 +1,5 @@
 @import "../mediaqueries";
+@import "../../utilities/variables";
 
 @include desktop{
     .project-1-page{
@@ -7,15 +8,15 @@
         "tittle tittle"
         "img caption"
         ;
-        div{
+        
 
-            h3{
-                /* tittle */
-                a{
-                    grid-area: tittle;
-                }
-            }
+            
+        /* tittle */
+        .project-1-page-tittle{
+            grid-area: tittle;
         }
+        
+        
             .project-1-page-img-tech{
                 grid-area: img;
 

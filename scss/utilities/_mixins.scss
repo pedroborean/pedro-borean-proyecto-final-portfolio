@@ -1,139 +1,31 @@
-@import "./colors";
-
-@mixin project-card {
-
-    /* Proyect styles */
-    margin: 1rem;
-    margin-bottom: 3rem;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: map-get($colors , terciario );
-    color: map-get($colors , primario );
-    box-shadow: .5rem .5rem map-get($colors , shadow );
-
-    h3{
-        /* tittle */
-        a{
-        color: map-get($colors , primario );
-        margin-bottom: 1rem;
-        font-size: 1.7rem;
-        font-weight: bold;
-        }
-    }
-    div{
-        a{ 
-            align-items: center;
-            /* Img's style */
-            img{
-                width: 10rem;
-                height: 8rem;
-                border-radius: 10%;
-                box-shadow: .5rem .5rem map-get($colors , shadow );
-                grid-area: img;
-
-            }
-                    
-        }
-
-        /* tech list */
-        ul{
-            margin-top: .25rem;
-            padding: 5px;
-            list-style: none;
-            display: flex;
-            flex-wrap: nowrap;
-            flex-direction: row;
-            gap: 1.5rem;
-            font-size: 1rem;
-
-            /* tech list items */
-            li{
-                border-bottom: solid map-get($colors , primario );
-                border-width: 2px;
-
-            }   
-        }
-    }
-    div{
-
-        /* text */
-        grid-area: text;
-        line-height: 45px;
-        font-size: 1rem;
-
-        /* go to project button */
-        div{
-            display: inline-block;
-            align-content: right;
-            background-color:  map-get($colors , secundario );
-            padding: .2rem;
-            border-radius: 15%;
-            box-shadow: .5rem .5rem map-get($colors , shadow );
-
-            /* go to project button, text */
-            a{
-            color:map-get($colors , primario ) ;
-            font-weight: 700;
-            }
-            
-        }
-        
-    }
-}
+@import "./variables";
 
 
-
-
-
-@mixin experience-card{
-    display: grid;
-    grid-template-areas: 
-    "tittle tittle"
-    "caption caption"
-    "img text";
-    
-        
-        /* tittle */
-        h3{
-            grid-area: tittle;
-            font-size: 2rem;
-            margin: 1rem 0 1rem 1rem;
-            margin-bottom: 1rem;
-            color:map-get($colors , secundario );
-        }
-        p{
-            grid-area: caption;
-            margin-left: 1rem;
-        }
-
-    /* Img */
-    img{
-        grid-area: img;
-        width: 5rem;
-        height: 5rem;
-        background-color: map-get($colors , secundario );
-        margin-left: 1rem;
-    }
-
-    /* text */
-    div{
-        
-        p{
-            grid-area: text;
-            margin-left: 1rem;
-            margin-right: .5rem;
-            text-align: top;
-            line-height: 25px;
-            font-size: 1rem;
-            color:map-get($colors , secundario );
-        }
-    }
-}
 
 @mixin transition {
     transition: 600ms;
     box-shadow: 0 0 0 .5rem map-get($colors , shadow );
     transform: scale(1.08);
+}
+
+@mixin tittles{
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1.7rem;
+    border-bottom: solid map-get($colors , secundario );
+    font-weight: bolder;
+    color: map-get($colors , secundario );
+}
+
+@mixin center-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin center-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

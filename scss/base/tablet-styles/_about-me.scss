@@ -1,17 +1,19 @@
-@include tablet{
-    main{
+@import "../../utilities/variables";
 
-        /* Top of the page */
-        .about-me-page-img-tittle{
+@include tablet{
+    
+
     
             /* Img */
-            .about-me-page-img{
+            #about-me-page-img{
                 height: 20rem;
                 width: 20rem;
-                margin-top: 3rem;
+                margin-bottom: 2rem;
                 border-radius: 50%;
                 border: 0.25rem solid map-get($colors, terciario );
             }
+                
+            
     
             /* Tittle */
             .about-me-page-tittle{
@@ -25,8 +27,6 @@
                 }
             }
     
-        }
-    
         /* Text */
         .about-me-page-text{
             font-size: 1.6rem;
@@ -38,6 +38,4 @@
                 font-size: 2rem;
             }
         }
-    
-    }
 }

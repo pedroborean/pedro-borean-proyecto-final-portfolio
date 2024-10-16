@@ -15,18 +15,16 @@ header {
   background-color: #F5F5DC;
   color: #2C2C2C;
   /* Taking out the text's colors */
+  /* Tittle's styles */
 }
 header a {
   color: #2C2C2C;
 }
-header nav div {
-  /* Tittle's styles */
-}
-header nav div #nav-tittle {
+header #nav-tittle {
   font-family: "Kumbh Sans";
   font-weight: bolder;
 }
-header nav div div ul #nav-items-styles:hover {
+header div ul #nav-items-styles:hover {
   display: inline-block;
   background-color: #2C2C2C;
   width: fit-content;
@@ -34,7 +32,7 @@ header nav div div ul #nav-items-styles:hover {
   border-radius: 0.5rem;
   /* Item's links styles */
 }
-header nav div div ul #nav-items-styles:hover #nav-items-link:hover {
+header div ul #nav-items-styles:hover #nav-items-link:hover {
   display: inline-block;
   color: whitesmoke;
 }
@@ -53,25 +51,18 @@ footer {
   color: #2C2C2C;
   height: fit-content;
   display: grid;
-  grid-template-areas: "img link" "img mail" "arr arr";
-  grid-template-columns: 45% 55%;
+  grid-template-areas: "link mail" "arr arr";
   /* text black */
-  /* My photo */
   /* LinkedIn's image + link */
   /* Mail + Logo */
 }
 footer a {
   color: #2C2C2C;
 }
-footer .footer-self-photo {
-  clip-path: circle(50% at 50% 50%);
-  height: 9rem;
-  margin: 1rem 1rem 0.8rem;
-  grid-area: img;
-}
 footer .linkedin-image-link {
   grid-area: link;
   margin-top: 2rem;
+  margin-left: 2rem;
   width: fit-content;
   /* LinkedIn's image */
 }
@@ -79,8 +70,10 @@ footer .linkedin-image-link .linkedin-image {
   height: 1.2rem;
 }
 footer .footer-mail-logo {
-  width: fit-content;
   grid-area: mail;
+  width: fit-content;
+  margin-top: 2rem;
+  margin-left: 2rem;
   /* Mail logo */
 }
 footer .footer-mail-logo .mail-logo {
@@ -88,9 +81,8 @@ footer .footer-mail-logo .mail-logo {
 }
 footer .all-rights-reserved {
   grid-area: arr;
-  display: grid;
-  align-content: center;
-  justify-content: center;
+  display: block;
+  text-align: center;
 }
 
 /* Home */
@@ -103,7 +95,8 @@ footer .all-rights-reserved {
 }
 .index-main .top-index-img-tittle {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   /* Img */
   /* Tittle */
@@ -195,25 +188,23 @@ footer .all-rights-reserved {
   color: #2C2C2C;
 }
 
-main {
-  /* Top of the page */
-  /* Text */
-}
-main .about-me-page-img-tittle {
+/* Top of the page */
+.about-me-page-img-tittle {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   /* Img */
   /* Tittle */
 }
-main .about-me-page-img-tittle .about-me-page-img {
+.about-me-page-img-tittle .about-me-page-img {
   clip-path: circle(50% at 50% 50%);
   height: 10rem;
   width: 10rem;
   margin: 0.9rem;
   box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
 }
-main .about-me-page-img-tittle .about-me-page-tittle {
+.about-me-page-img-tittle .about-me-page-tittle {
   margin: 1rem;
   font-size: 4rem;
   font-weight: lighter;
@@ -225,10 +216,12 @@ main .about-me-page-img-tittle .about-me-page-tittle {
   box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
   /* Bolder */
 }
-main .about-me-page-img-tittle .about-me-page-tittle b {
+.about-me-page-img-tittle .about-me-page-tittle b {
   font-weight: bolder;
 }
-main .about-me-page-text {
+
+/* Text */
+.about-me-page-text {
   line-height: 3rem;
   margin: 2rem 2rem 0 2rem;
   padding-bottom: 2rem;
@@ -237,10 +230,10 @@ main .about-me-page-text {
   color: whitesmoke;
   background-color: #2C2C2C;
 }
-main .about-me-page-text p {
+.about-me-page-text p {
   margin-bottom: 3rem;
 }
-main .about-me-page-text p b {
+.about-me-page-text p b {
   font-weight: bold;
 }
 
@@ -258,12 +251,14 @@ main .about-me-page-text p b {
   margin-bottom: 1.7rem;
   border-bottom: solid whitesmoke;
   font-weight: bolder;
+  color: whitesmoke;
 }
 
 .projects-cards {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 3rem;
 }
 
@@ -275,34 +270,32 @@ main .about-me-page-text p b {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: #F5F5DC;
   color: #2C2C2C;
   box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
-}
-.project-1-page h3 {
   /* tittle */
+  /* tech list */
 }
-.project-1-page h3 a {
+.project-1-page .project-1-page-tittle {
   color: #2C2C2C;
   margin-bottom: 1rem;
   font-size: 1.7rem;
   font-weight: bold;
 }
-.project-1-page div {
-  /* tech list */
-}
-.project-1-page div a {
+.project-1-page a {
   align-items: center;
   /* Img's style */
 }
-.project-1-page div a img {
+.project-1-page a .project-1-page-img {
   width: 10rem;
   height: 8rem;
   border-radius: 10%;
   box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
   grid-area: img;
+  margin-left: 1rem;
 }
-.project-1-page div ul {
+.project-1-page ul {
   margin-top: 0.25rem;
   padding: 5px;
   list-style: none;
@@ -313,7 +306,7 @@ main .about-me-page-text p b {
   font-size: 1rem;
   /* tech list items */
 }
-.project-1-page div ul li {
+.project-1-page ul li {
   border-bottom: solid #2C2C2C;
   border-width: 2px;
 }
@@ -337,9 +330,6 @@ main .about-me-page-text p b {
   color: #2C2C2C;
   font-weight: 700;
 }
-.project-1-page .project-1-page-img {
-  margin-left: 1rem;
-}
 .project-1-page .project-1-page-go-to-project:hover {
   transition: 600ms;
   box-shadow: 0 0 0 0.5rem rgba(0, 0, 0, 0.5);
@@ -356,6 +346,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 /* Experience section */
@@ -365,6 +356,7 @@ h2 {
   margin-bottom: 1.7rem;
   border-bottom: solid whitesmoke;
   font-weight: bolder;
+  color: whitesmoke;
 }
 
 /* Experience 1 */
@@ -428,6 +420,7 @@ h2 {
   height: 5rem;
   background-color: whitesmoke;
   margin-left: 1rem;
+  height: fit-content;
 }
 .experience-page-2 div p {
   grid-area: text;
@@ -437,9 +430,6 @@ h2 {
   line-height: 25px;
   font-size: 1rem;
   color: whitesmoke;
-}
-.experience-page-2 img {
-  height: fit-content;
 }
 
 /* Contact Page */
@@ -516,29 +506,29 @@ h2 {
   margin: 1rem;
 }
 
-main article {
+article {
   display: flex;
   flex-direction: column;
   align-items: center;
   /* tittle */
-}
-main article h1 {
-  color: whitesmoke;
-  font-size: 2.5rem;
-  font-weight: bolder;
-  margin-top: 2rem;
-  border-bottom: solid whitesmoke;
-}
-main article div {
   /* subheadings */
 }
-main article div h2 {
+article h1 {
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1.7rem;
+  border-bottom: solid whitesmoke;
+  font-weight: bolder;
+  color: whitesmoke;
+  margin-top: 2rem;
+}
+article h2 {
   font-size: 1.5rem;
   margin-left: 1rem;
   margin-top: 1rem;
   font-weight: bolder;
 }
-main article div summary p {
+article summary p {
   line-height: 25px;
   font-size: 1rem;
   font-stretch: extra-condensed;
@@ -547,88 +537,77 @@ main article div summary p {
   margin-top: 0.1rem;
   margin-left: 1rem;
 }
-main article img {
+article img {
   margin: 1rem;
   margin-top: 1rem;
   box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
   height: 18rem;
   border: #2C2C2C 2px solid;
 }
-main article div h2 {
+article div h2 {
   margin-left: 1rem;
 }
-main article div p {
+article div p {
   color: whitesmoke;
   margin-top: 0.1rem;
   padding-bottom: 1rem;
 }
 
 @media screen and (min-width: 600px) {
-  header nav div {
-    /* Header styles */
-    /* tittle */
-  }
-  header nav div #nav-tittle {
+  /* Header styles */
+  /* tittle */
+  #nav-tittle {
     font-size: 2.5rem;
   }
-  header nav div ul {
-    /* items */
-  }
-  header nav div ul #nav-items-styles {
+  /* items */
+  #nav-items-styles {
     font-size: 1.5rem;
     padding: 0.2rem;
   }
   /* Footer */
-  footer {
-    grid-template-columns: 20% 80%;
-    /* img */
-    /* linkedin img + txt */
-    /* Mail */
-  }
-  footer .footer-self-photo {
-    height: 10rem;
-  }
-  footer .linkedin-image-link {
+  /* linkedin img + txt */
+  .linkedin-image-link {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-left: 2rem;
     margin-top: 2rem;
     /* img */
   }
-  footer .linkedin-image-link .linkedin-image {
+  .linkedin-image-link #linkedin-image {
     display: inline-block;
-    height: 2rem;
+    height: 3rem;
   }
-  footer .footer-mail-logo {
+  /* Mail */
+  .footer-mail-logo {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 2.7rem;
     margin-left: 2rem;
   }
-  footer .footer-mail-logo .mail-logo {
-    height: 2rem;
+  .footer-mail-logo #mail-logo {
+    height: 3rem;
   }
 }
 @media screen and (min-width: 600px) {
   .index-main {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 2rem;
-  }
-  .index-main div {
     /* Img */
     /* tittle desabled */
   }
-  .index-main div .top-index-img {
+  .index-main .top-index-img {
     height: 20rem;
     margin-right: 2rem;
     margin-top: 3rem;
   }
-  .index-main div .top-index-tittle {
+  .index-main .top-index-tittle {
     font-size: 5rem;
     line-height: 5rem;
   }
-  .index-main div .top-index-tittle b {
+  .index-main .top-index-tittle b {
     font-size: 5rem;
   }
   .index-main .index-text-section {
@@ -667,37 +646,32 @@ main article div p {
   }
 }
 @media screen and (min-width: 600px) {
-  main {
-    /* Top of the page */
-    /* Text */
-  }
-  main .about-me-page-img-tittle {
-    /* Img */
-    /* Tittle */
-  }
-  main .about-me-page-img-tittle .about-me-page-img {
+  /* Img */
+  #about-me-page-img {
     height: 20rem;
     width: 20rem;
-    margin-top: 3rem;
+    margin-bottom: 2rem;
     border-radius: 50%;
     border: 0.25rem solid #F5F5DC;
   }
-  main .about-me-page-img-tittle .about-me-page-tittle {
+  /* Tittle */
+  .about-me-page-tittle {
     width: 30rem;
     font-size: 7rem;
     box-shadow: 2rem 2rem rgba(0, 0, 0, 0.5);
     /* Bolder */
   }
-  main .about-me-page-img-tittle .about-me-page-tittle b {
+  .about-me-page-tittle b {
     font-weight: bolder;
   }
-  main .about-me-page-text {
+  /* Text */
+  .about-me-page-text {
     font-size: 1.6rem;
     line-height: 3rem;
     padding: 5rem;
     text-align: left;
   }
-  main .about-me-page-text b {
+  .about-me-page-text b {
     font-size: 2rem;
   }
 }
@@ -724,68 +698,61 @@ main article div p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
     /* tittle */
-    /* fieldset */
+    /* Name */
+    /* Email */
+    /* Message */
   }
   .contact-page .contact-tittle {
     font-size: 7rem;
   }
-  .contact-page fieldset {
-    /* Name + Email */
-    /* Message */
-  }
-  .contact-page fieldset .name-email {
-    /* Name */
-    /* Email */
-  }
-  .contact-page fieldset .name-email .name-div .name-label {
+  .contact-page .name-div .name-label {
     font-size: 1.7rem;
   }
-  .contact-page fieldset .name-email .name-div .name-input {
+  .contact-page .name-div .name-input {
     width: 50rem;
     height: 3rem;
   }
-  .contact-page fieldset .name-email .email-div {
+  .contact-page .email-div {
     margin-top: 2rem;
   }
-  .contact-page fieldset .name-email .email-div .email-label {
+  .contact-page .email-div .email-label {
     font-size: 1.7rem;
   }
-  .contact-page fieldset .name-email .email-div .email-input {
+  .contact-page .email-div .email-input {
     width: 50rem;
     height: 3rem;
   }
-  .contact-page fieldset .message-div {
+  .contact-page .message-div {
     margin-top: 2rem;
   }
-  .contact-page fieldset .message-div .message-label {
+  .contact-page .message-div .message-label {
     font-size: 1.7rem;
   }
-  .contact-page fieldset .message-div .message-input {
+  .contact-page .message-div .message-input {
     width: 50rem;
     margin: 1rem;
   }
 }
 @media screen and (min-width: 600px) {
-  main article div {
-    /* subheadings */
-  }
-  main article div h2 {
+  /* subheadings */
+  h2 {
     font-size: 2rem;
   }
-  main article div summary p {
+  .project-example-page-text p {
     line-height: 40px;
     font-size: 1.5rem;
   }
-  main article img {
+  img {
     margin: 3rem;
     height: 25rem;
   }
-  main article div h2 {
+  div h2 {
     margin-left: 1rem;
   }
-  main article div p {
+  div p {
     line-height: 40px;
     font-size: 1.5rem;
   }
@@ -794,11 +761,9 @@ main article div p {
   .index-main {
     display: grid;
     grid-template-areas: "img text text" "img text text";
-  }
-  .index-main div {
     /* tablet and mobile tittle */
   }
-  .index-main div .top-index-tittle {
+  .index-main .top-index-tittle {
     display: none;
   }
   .index-main .index-text-section {
@@ -823,37 +788,39 @@ main article div p {
     margin-right: 0;
   }
   .index-main .index-text-section .go-to-contact-page {
-    margin-right: 15rem;
+    margin-right: 10rem;
     margin-bottom: 10rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  main {
-    /* Top of the page */
-    /* Text */
-  }
-  main .about-me-page-img-tittle {
+  /* Top of the page */
+  .about-me-page-img-tittle {
     display: flex;
     flex-direction: row;
     align-content: center;
     /* Img */
     /* Tittle */
   }
-  main .about-me-page-img-tittle .about-me-page-img {
-    margin-right: 15rem;
+  .about-me-page-img-tittle .about-me-page-img {
+    margin-right: 10rem;
     margin-left: 5rem;
+    height: 20rem;
+    width: 20rem;
   }
-  main .about-me-page-img-tittle .about-me-page-tittle {
+  .about-me-page-img-tittle .about-me-page-tittle {
     margin-top: 5rem;
-    height: 25rem;
+    height: 20rem;
+    width: 20rem;
+    align-content: center;
   }
-  main .about-me-page-text {
-    font-size: 2rem;
+  /* Text */
+  .about-me-page-text {
+    font-size: 1.8rem;
     line-height: 3rem;
     padding: 5rem;
     text-align: left;
   }
-  main .about-me-page-text b {
+  .about-me-page-text b {
     font-size: 2.5rem;
   }
 }
@@ -861,11 +828,9 @@ main article div p {
   .project-1-page {
     display: grid;
     grid-template-areas: "tittle tittle" "img caption";
-  }
-  .project-1-page div h3 {
     /* tittle */
   }
-  .project-1-page div h3 a {
+  .project-1-page .project-1-page-tittle {
     grid-area: tittle;
   }
   .project-1-page .project-1-page-img-tech {

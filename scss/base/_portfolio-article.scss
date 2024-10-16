@@ -1,5 +1,5 @@
-@import "../utilities/colors";
-main{
+@import "../utilities/variables";
+   
     article{
         display: flex;
         flex-direction: column;
@@ -7,14 +7,11 @@ main{
 
         /* tittle */
         h1{
-            color: map-get($colors, secundario );
-            font-size: 2.5rem;
-            font-weight: bolder;
+            @include tittles;
             margin-top: 2rem;
-            border-bottom: solid map-get($colors, secundario );
         }
 
-        div{
+        
             /* subheadings */
             h2{
                 font-size: 1.5rem;
@@ -36,7 +33,6 @@ main{
                 }
             }
 
-        }
 
         img{
             margin: 1rem;
@@ -58,5 +54,3 @@ main{
             }
         }
     }
-
-}

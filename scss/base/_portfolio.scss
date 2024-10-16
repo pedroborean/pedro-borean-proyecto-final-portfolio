@@ -1,4 +1,4 @@
-@import "../utilities/colors";
+@import "../utilities/variables";
 @import "../utilities/mixins";
 
 /* Project's Page */
@@ -12,26 +12,94 @@
 /* Project page's styles */
 
 .project-page-tittle{
-    font-size: 3rem;
-    margin-top: 1rem;
-    margin-bottom: 1.7rem;
-    border-bottom: solid map-get($colors , secundario );
-    font-weight: bolder;
+    @include tittles
 }
 
 .projects-cards{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include center-column;
     gap: 3rem;
 }
 
 
 .project-1-page {
-    @include project-card;
-    .project-1-page-img{
-        margin-left: 1rem;
+
+    /* Proyect styles */
+    margin: 1rem;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    @include center-column;
+    background-color: map-get($colors , terciario );
+    color: map-get($colors , primario );
+    box-shadow: .5rem .5rem map-get($colors , shadow );
+
+ 
+        /* tittle */
+        .project-1-page-tittle{
+        color: map-get($colors , primario );
+        margin-bottom: 1rem;
+        font-size: 1.7rem;
+        font-weight: bold;
+        }
+    
+    
+        a{ 
+            align-items: center;
+            /* Img's style */
+            .project-1-page-img{
+                width: 10rem;
+                height: 8rem;
+                border-radius: 10%;
+                box-shadow: .5rem .5rem map-get($colors , shadow );
+                grid-area: img;
+                margin-left: 1rem;
+            }
+                    
+        }
+
+        /* tech list */
+        ul{
+            margin-top: .25rem;
+            padding: 5px;
+            list-style: none;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            gap: 1.5rem;
+            font-size: 1rem;
+
+            /* tech list items */
+            li{
+                border-bottom: solid map-get($colors , primario );
+                border-width: 2px;
+
+            }   
+        }
+    div{
+
+        /* text */
+        grid-area: text;
+        line-height: 45px;
+        font-size: 1rem;
+
+        /* go to project button */
+        div{
+            display: inline-block;
+            align-content: right;
+            background-color:  map-get($colors , secundario );
+            padding: .2rem;
+            border-radius: 15%;
+            box-shadow: .5rem .5rem map-get($colors , shadow );
+
+            /* go to project button, text */
+            a{
+            color:map-get($colors , primario ) ;
+            font-weight: 700;
+            }
+            
+        }
+        
     }
+    
     .project-1-page-go-to-project:hover{
         @include transition;
     }

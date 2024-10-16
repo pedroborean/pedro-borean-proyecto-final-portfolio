@@ -1,4 +1,4 @@
-@import "../utilities/colors";
+@import "../utilities/variables";
 @import "../utilities/mixins";
 
 /* Home */
@@ -10,9 +10,7 @@
     
     /* Top of page */
     .top-index-img-tittle{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        @include center-column;
 
         /* Img */
         .top-index-img{

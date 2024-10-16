@@ -1,4 +1,4 @@
-@import "../utilities/colors";
+@import "../utilities/variables";
 @import "../utilities/mixins";
 
 
@@ -7,34 +7,108 @@
 /* Experience page's styles */
 
 .experience-page{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include center-column;
 }
 
 /* Experience section */
 
 .experience-page-tittle{
-    font-size: 3rem;
-    margin-top: 1rem;
-    margin-bottom: 1.7rem;
-    border-bottom: solid map-get($colors , secundario );
-    font-weight: bolder;
+    @include tittles
 }
 
 
 /* Experience 1 */
 .experience-page-1{
-    @include experience-card;
+    display: grid;
+    grid-template-areas: 
+    "tittle tittle"
+    "caption caption"
+    "img text";
+    
+        
+        /* tittle */
+        h3{
+            grid-area: tittle;
+            font-size: 2rem;
+            margin: 1rem 0 1rem 1rem;
+            margin-bottom: 1rem;
+            color:map-get($colors , secundario );
+        }
+        p{
+            grid-area: caption;
+            margin-left: 1rem;
+        }
+
+    /* Img */
+    img{
+        grid-area: img;
+        width: 5rem;
+        height: 5rem;
+        background-color: map-get($colors , secundario );
+        margin-left: 1rem;
+    }
+
+    /* text */
+    div{
+        
+        p{
+            grid-area: text;
+            margin-left: 1rem;
+            margin-right: .5rem;
+            text-align: top;
+            line-height: 25px;
+            font-size: 1rem;
+            color:map-get($colors , secundario );
+        }
+    }
     
 }
 
 
 /* Experience 2 */
 .experience-page-2{
-    @include experience-card;
+    display: grid;
+    grid-template-areas: 
+    "tittle tittle"
+    "caption caption"
+    "img text";
+    
+        
+        /* tittle */
+        h3{
+            grid-area: tittle;
+            font-size: 2rem;
+            margin: 1rem 0 1rem 1rem;
+            margin-bottom: 1rem;
+            color:map-get($colors , secundario );
+        }
+        p{
+            grid-area: caption;
+            margin-left: 1rem;
+        }
+
+    /* Img */
     img{
+        grid-area: img;
+        width: 5rem;
+        height: 5rem;
+        background-color: map-get($colors , secundario );
+        margin-left: 1rem;
         height: fit-content;
+    }
+
+    /* text */
+    div{
+        
+        p{
+            grid-area: text;
+            margin-left: 1rem;
+            margin-right: .5rem;
+            text-align: top;
+            line-height: 25px;
+            font-size: 1rem;
+            color:map-get($colors , secundario );
+        }
     }
 
 }
